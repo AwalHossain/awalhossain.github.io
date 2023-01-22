@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
-  BsGithub, BsLinkedin,
-  BsTwitter
+  BsGithub, BsLinkedin, BsTwitter
 } from "react-icons/bs";
 import { MdFindReplace, MdOutlineLocationOn } from "react-icons/md";
 import Slide from "react-reveal/Slide";
@@ -95,6 +94,9 @@ const Hero = () => {
                     <BsGithub className="icon-hover" />
                   </a>
                 </li>
+
+                {isOpend && (
+                  <>
                 <li className="icons">
                   <a
                     target="_blank"
@@ -104,9 +106,6 @@ const Hero = () => {
                     <BsTwitter className="icon-hover" />
                   </a>
                 </li>
-
-                {isOpend && (
-                  <>
                   </>
                 )}
 
