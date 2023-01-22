@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import {
-  BsFacebook,
-  BsGithub,
-  BsInstagram,
-  BsLinkedin,
+  BsGithub, BsLinkedin,
   BsTwitter
 } from "react-icons/bs";
 import { MdFindReplace, MdOutlineLocationOn } from "react-icons/md";
@@ -84,7 +81,7 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.linkedin.com/in/tajkier-haque"
+                    href="https://www.linkedin.com/in/awal-hossain-0bb650108/"
                   >
                     <BsLinkedin className="icon-hover" />
                   </a>
@@ -93,7 +90,7 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://github.com/coderboy-raiyan"
+                    href="https://github.com/AwalHossain"
                   >
                     <BsGithub className="icon-hover" />
                   </a>
@@ -102,7 +99,7 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://twitter.com/md_tajkier"
+                    href="https://twitter.com/AwalHosssaimn"
                   >
                     <BsTwitter className="icon-hover" />
                   </a>
@@ -110,24 +107,6 @@ const Hero = () => {
 
                 {isOpend && (
                   <>
-                    <li className="icons">
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.facebook.com/tajkierhaque/"
-                      >
-                        <BsFacebook className="icon-hover" />
-                      </a>
-                    </li>
-                    <li className="icons">
-                      <a
-                        target="_blank"
-                        rel="noreferrer"
-                        href="https://www.instagram.com/tajkier_haque/"
-                      >
-                        <BsInstagram className="icon-hover" />
-                      </a>
-                    </li>
                   </>
                 )}
 
@@ -145,7 +124,7 @@ const Hero = () => {
         <div className="mt-6">
           <Slide right>
             <p className="my-summary font-light p-3 leading-7">
-              Hi there! I'm Raiyan. I work as a full-time junior web developer.
+              Hi there! I'm Awal. I work as a full-time web developer.
               In my spare time, I do my projects{" "}
               <i>(normally it is about 1-2 hours in the morning before work)</i>
               . Most of my{" "}
@@ -159,7 +138,7 @@ const Hero = () => {
               are focused on one thing – to improve my skills. You may see these
               projects to know about my ambition and how I worked or learn
               javascript syntax and start experimenting with web development and
-              math behind them, etc. I also write{" "}
+              math behind them, etc. I also try to write{" "}
               <Link className="font-semibold underline" to="blogs ">
                 articles
               </Link>{" "}
