@@ -1,0 +1,81 @@
+[
+  {
+    "id": 1,
+    "name": "Niche-client-side-full-stack-web",
+    "img": "https://i.ibb.co/2Z4CdJN/cars-24.png",
+    "duration": "Nov 28,2021",
+    "des": "Built with beautiful features for users.User can buy cars and give us their valuable reviews. All the functionalities are dynamic using back-end and user can find some of the best cars in the world.Also there is a dashboard for admin who can control all the management system of the website. And you can also find here the most sells cars in the world.",
+    "client_side_code": "https://github.com/coderboy-raiyan/niche-client-side-full-stack-web",
+    "server_side_code": "https://github.com/coderboy-raiyan/Niche-server-side-code",
+    "live_link": "https://niche-web-a35d2.web.app/",
+    "technology": [
+      "React js",
+      "Node js",
+      "Express js",
+      "MongoDb",
+      "Firebase",
+      "Full Stack"
+    ],
+    "demo_img": [
+      "https://i.postimg.cc/q77D5Xjm/cars24-1.png",
+      "https://i.postimg.cc/8zN0hVWg/cars-24-3.png",
+      "https://i.postimg.cc/Sxdtdt72/cars24-2.png"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Tourism-client-side-full-stack-web",
+    "img": "https://i.ibb.co/mtjsf2T/media-2.png",
+    "duration": "Oct 07,2021",
+    "des": "This a website for your next trip. It has the back-end & user can book their next trip ticket. We give you the best tourism experience and a great support.Also User can add their own liked places and we will provide those services too.And those services are available with a travel guide. So that you can know more about the place you visit.",
+    "client_side_code": "https://github.com/coderboy-raiyan/tourism-client-side-full-stack-web",
+    "server_side_code": "https://github.com/coderboy-raiyan/tourism-server-side-code",
+    "live_link": "https://traveler-7f312.web.app/",
+    "technology": [
+      "React js",
+      "Node js",
+      "Express js",
+      "MongoDb",
+      "Firebase",
+      "React Bootstrap",
+      "Full Stack"
+    ],
+    "demo_img": [
+      "https://i.postimg.cc/kg5XfL3L/health-3.png",
+      "https://i.postimg.cc/TPL2XmP9/health-1.png",
+      "https://i.postimg.cc/VNxfs6rc/health-2.png"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Health-care-website",
+    "img": "https://i.ibb.co/kxRckNv/health-care.png",
+    "duration": "Sep 29, 2021",
+    "des": "Here is a website that helps you with your dental care.User can find here excellent doctors. And It’s a very minimal website that user can easily access It’s all features. Also we provide user authentication using firebase and it’s fully responsive for all devices. User can book their appointment on time. Also we provide 24/7 support in our contact page.",
+
+    "client_side_code": "https://github.com/coderboy-raiyan/health-care-website",
+    "live_link": "https://health-care-e23e9.web.app/",
+    "technology": ["React js", "Firebase", "React router dom, React-Bootstrap"],
+    "demo_img": [
+      "https://i.postimg.cc/nLp83DDr/medina-1.png",
+      "https://i.postimg.cc/pLDbQZy3/medina.png",
+      "https://i.postimg.cc/QMb2wdQb/mdina-3.png"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Amazon-Simple-Cart",
+    "img": "https://i.postimg.cc/jq30L7NY/emajon.png",
+    "duration": "Oct 01,2021",
+    "des": "User can come here and buy their products. This fully build with react js. Also User can place order. We provide a simple cart system for user. A simple search system for user",
+
+    "client_side_code": "https://github.com/coderboy-raiyan/amazon-simple-cart",
+    "live_link": "https://simple-amazon-cart.netlify.app/",
+    "technology": ["React js", "React-Bootstrap", "React router dom"],
+    "demo_img": [
+      "https://i.postimg.cc/jq30L7NY/emajon.png",
+      "https://i.postimg.cc/NM8vPJC3/emajon-3.png",
+      "https://i.postimg.cc/MTJ85250/emajon2.png"
+    ]
+  }
+]
