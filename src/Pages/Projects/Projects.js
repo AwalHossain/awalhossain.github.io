@@ -19,7 +19,7 @@ const Projects = () => {
               {allProjects.length}
             </span>
           </h2>
-          <h5 className="text-sm">Total Stars : 147k</h5>
+          {/* <h5 className="text-sm">Total Stars : 147k</h5> */}
         </div>
         {/* More projects */}
         <div className="grid lg:grid-cols-3 grid-col-1 gap-y-7 gap-x-5">

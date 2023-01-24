@@ -110,7 +110,7 @@ const ContactUs = () => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://www.linkedin.com/in/tajkier-haque"
+                      href="https://www.linkedin.com/in/awal-hossain-0bb650108/"
                     >
                       <BsLinkedin className="icon-hover" />
                     </a>
@@ -119,7 +119,7 @@ const ContactUs = () => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://github.com/coderboy-raiyan"
+                      href="https://github.com/AwalHossain"
                     >
                       <BsGithub className="icon-hover" />
                     </a>
@@ -128,7 +128,7 @@ const ContactUs = () => {
                     <a
                       target="_blank"
                       rel="noreferrer"
-                      href="https://twitter.com/md_tajkier"
+                      href="https://twitter.com/AwalHosssaimn"
                     >
                       <BsTwitter className="icon-hover" />
                     </a>
