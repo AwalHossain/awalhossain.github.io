@@ -5,9 +5,9 @@ import Slide from "react-reveal/Slide";
 const Education = () => {
   const education = [
     {
-      deg: "Secondary School Certificate",
-      scl: "Bangamata Shekh Fazilatunnesa Mujib Goverment Secondary School,Uttara,Dhaka",
-      duration: "2020 - 2021",
+      deg: "BSc in Textile Engineering",
+      scl: "Jashore University of Science and Technology",
+      duration: "2020 - 2024",
     },
   ];
   return (
@@ -45,7 +45,7 @@ const Education = () => {
           If you like my work, you can{" "}
           <a
             className="text-blue-500 font-semibold hover:underline"
-            href="https://github.com/coderboy-raiyan"
+            href="https://github.com/AwalHossain"
             target="_blank"
             rel="noreferrer"
           >
