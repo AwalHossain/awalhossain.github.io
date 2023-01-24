@@ -9,7 +9,7 @@ const BuyCoffe = () => {
           If you like my work, you can{" "}
           <a
             className="text-blue-500 font-semibold hover:underline"
-            href="https://github.com/coderboy-raiyan"
+            href="https://github.com/AwalHossain"
             target="_blank"
             rel="noreferrer"
           >
