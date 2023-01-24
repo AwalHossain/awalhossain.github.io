@@ -10,8 +10,8 @@ const ContactUs = () => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_gk543g6",
-        "template_fmkdaw9",
+        "service_w1ftxak",
+        "template_8mtoqn3",
         e.target,
         "user_ru9Ys5QQHd2OdypmgAsFT"
       )
