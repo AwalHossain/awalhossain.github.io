@@ -25,8 +25,12 @@ const TechStacks = () => {
       img: "https://i.postimg.cc/6QDnyDTk/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png",
     },
     {
-      name: "Netlify",
-      img: "https://i.postimg.cc/4NVBJx06/netlify.png",
+      name: "AWS",
+      img: "https://i.postimg.cc/L8vFtGrT/aws-logo-smile-1200x630.png",
+    },
+    {
+      name: "AZURE",
+      img: "https://i.postimg.cc/xT0mxzXP/azure-1.webp",
     },
     {
       name: "Tailwind CSS",
