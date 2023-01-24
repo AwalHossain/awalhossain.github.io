@@ -17,7 +17,7 @@ const Footer = () => {
               onClick={() => window.scrollTo(0, 0)}
               to="/"
             >
-              R.
+              A.
             </Link>
           </div>
 
@@ -29,7 +29,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.linkedin.com/in/tajkier-haque"
+                href="https://www.linkedin.com/in/awal-hossain-0bb650108/"
               >
                 <BsLinkedin size={20} className="icon-hover" />
               </a>
@@ -38,7 +38,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://github.com/coderboy-raiyan"
+                href="https://github.com/AwalHossain"
               >
                 <BsGithub size={20} className="icon-hover" />
               </a>
@@ -47,7 +47,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://twitter.com/md_tajkier"
+                href="https://twitter.com/AwalHosssaimn"
               >
                 <BsTwitter size={20} className="icon-hover" />
               </a>
@@ -55,7 +55,7 @@ const Footer = () => {
           </ul>
 
           <div className="lg:w-1/3 text-gray-300">
-            <p>© 2021. All rights reserved by Raiyan.</p>
+            <p>© 2023. All rights reserved by Awal.</p>
           </div>
         </div>
       </div>
