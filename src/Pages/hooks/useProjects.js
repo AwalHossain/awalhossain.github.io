@@ -13,7 +13,7 @@ const useProjects = () => {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/coderboy-raiyan/my-projects-data/main/project.json"
+      "https://raw.githubusercontent.com/AwalHossain/Portfolio/main/src/Pages/project.json"
     )
       .then((res) => res.json())
       .then((data) => {
