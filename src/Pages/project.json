@@ -27,7 +27,7 @@
     "name": "Tourism-client-side-full-stack-web",
     "img": "https://i.ibb.co/mtjsf2T/media-2.png",
     "duration": "Oct 07,2021",
-    "des": "This a website for your next trip. It has the back-end & user can book their next trip ticket. We give you the best tourism experience and a great support.Also User can add their own liked places and we will provide those services too.And those services are available with a travel guide. So that you can know more about the place you visit.",
+    "des": "This a website for your next trip. It has the back-end & user can book their next trip ticket.  CI/CD has implemented to test API. Frontend and backend is hosted on AWS EC2 server. So that you can know more about the place you visit.",
     "client_side_code": "https://github.com/coderboy-raiyan/tourism-client-side-full-stack-web",
     "server_side_code": "https://github.com/coderboy-raiyan/tourism-server-side-code",
     "live_link": "https://traveler-7f312.web.app/",
