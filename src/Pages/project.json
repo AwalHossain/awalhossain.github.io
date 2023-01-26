@@ -58,7 +58,8 @@
     "technology": [
       "ReactJS",
       "NodeJS",
-      "React router dom",
+      "webRtc",
+      "Redux",
       "Tailwind CSS",
       "Socket.io",
       "PeerJS",
