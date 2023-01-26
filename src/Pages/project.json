@@ -48,7 +48,7 @@
   },
   {
     "id": 3,
-    "name": "Health-care-website",
+    "name": "GrabBug (Team Project)",
     "img": "https://i.ibb.co/PN1HwqV/grab-Bug-1.png",
     "duration": "Sep 29, 2021",
     "des": "A software development tool that be used to log and monitor bugs or errors during software development and testing. Custom authentication with OTP validation and SMS to mobile when a critical issue arises. Responsible for dynamic Graph and Charts Logic so that users can visualize the data. Users can able to chat with audio & video call feature with screen sharing option. Emmergency problem will be notified by twilio sms service",
