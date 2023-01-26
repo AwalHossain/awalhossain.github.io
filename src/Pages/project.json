@@ -5,9 +5,9 @@
     "img": "https://i.ibb.co/bd3JmJH/nasa-1.png",
     "duration": "Nov 28,2022",
     "des": "NASA mission control dashboard to schedule missions targeting Kepler exoplanets. All the functionalities are dynamic using back-end and followed the MVC pattern.Docker have used to Hosted on Amazon EC2 server. CI/CD and API unit test has checked its safety issue",
-    "client_side_code": "https://github.com/coderboy-raiyan/niche-client-side-full-stack-web",
-    "server_side_code": "https://github.com/coderboy-raiyan/Niche-server-side-code",
-    "live_link": "https://niche-web-a35d2.web.app/",
+    "client_side_code": "https://github.com/AwalHossain/Nasa_Project",
+    "server_side_code": "https://github.com/AwalHossain/Nasa_Project",
+    "live_link": "http://18.212.193.165:8000/",
     "technology": [
       "ReactJS",
       "NodeJS",
