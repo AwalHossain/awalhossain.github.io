@@ -49,20 +49,25 @@
   {
     "id": 3,
     "name": "Health-care-website",
-    "img": "https://i.ibb.co/kxRckNv/health-care.png",
+    "img": "https://i.ibb.co/PN1HwqV/grab-Bug-1.png",
     "duration": "Sep 29, 2021",
-    "des": "Here is a website that helps you with your dental care.User can find here excellent doctors. And It’s a very minimal website that user can easily access It’s all features. Also we provide user authentication using firebase and it’s fully responsive for all devices. User can book their appointment on time. Also we provide 24/7 support in our contact page.",
-    "client_side_code": "https://github.com/coderboy-raiyan/health-care-website",
-    "live_link": "https://health-care-e23e9.web.app/",
+    "des": "A software development tool that be used to log and monitor bugs or errors during software development and testing. Custom authentication with OTP validation and SMS to mobile when a critical issue arises. Responsible for dynamic Graph and Charts Logic so that users can visualize the data. Users can able to chat with audio & video call feature with screen sharing option. Emmergency problem will be notified by twilio sms service",
+    "client_side_code": "https://github.com/blooming-volcanoes/GrabBug-Client",
+    "server_side_code": "https://github.com/blooming-volcanoes/GrabBug-Server",
+    "live_link": "https://blooming-volcanoes.vercel.app/",
     "technology": [
-      "React js",
-      "Firebase",
-      "React router dom, React-Bootstrap"
+      "ReactJS",
+      "NodeJS",
+      "React router dom",
+      "Tailwind CSS",
+      "Socket.io",
+      "PeerJS",
+      "Twilio"
     ],
     "demo_img": [
-      "https://i.postimg.cc/nLp83DDr/medina-1.png",
-      "https://i.postimg.cc/pLDbQZy3/medina.png",
-      "https://i.postimg.cc/QMb2wdQb/mdina-3.png"
+      "https://i.ibb.co/PN1HwqV/grab-Bug-1.png",
+      "https://i.ibb.co/nbT4YtX/grab-Bug-2.png",
+      "https://i.ibb.co/C6pyJ4M/grab-Bug-3.png"
     ]
   },
   {
