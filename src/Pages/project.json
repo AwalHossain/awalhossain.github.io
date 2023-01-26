@@ -4,22 +4,22 @@
     "name": "NASA Mission Control Project",
     "img": "https://i.ibb.co/bd3JmJH/nasa-1.png",
     "duration": "Nov 28,2022",
-    "des": "NASA mission control dashboard to schedule missions targeting Kepler exoplanets. All the functionalities are dynamic using back-end and followed the MVC pattern. Also there is a dashboard for admin who can control all the management system of the website. And you can also find here the most sells cars in the world.",
+    "des": "NASA mission control dashboard to schedule missions targeting Kepler exoplanets. All the functionalities are dynamic using back-end and followed the MVC pattern.Docker have used to Hosted on Amazon EC2 server. CI/CD and API unit test has checked its safety issue",
     "client_side_code": "https://github.com/coderboy-raiyan/niche-client-side-full-stack-web",
     "server_side_code": "https://github.com/coderboy-raiyan/Niche-server-side-code",
     "live_link": "https://niche-web-a35d2.web.app/",
     "technology": [
-      "React js",
-      "Node js",
-      "Express js",
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
       "MongoDb",
-      "Firebase",
-      "Full Stack"
+      "AWS",
+      "Docker"
     ],
     "demo_img": [
-      "https://i.postimg.cc/q77D5Xjm/cars24-1.png",
-      "https://i.postimg.cc/8zN0hVWg/cars-24-3.png",
-      "https://i.postimg.cc/Sxdtdt72/cars24-2.png"
+      "https://i.ibb.co/bd3JmJH/nasa-1.png",
+      "https://i.ibb.co/b5kDQLb/nasa-2.png",
+      "https://i.ibb.co/nfH8MgT/nasa-3.png"
     ]
   },
   {
