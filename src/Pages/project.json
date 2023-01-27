@@ -24,7 +24,7 @@
   },
   {
     "id": 2,
-    "name": "Tourism-client-side-full-stack-web",
+    "name": "Bhuiyan-Trading(Team Project)",
     "img": "https://i.ibb.co/mtjsf2T/media-2.png",
     "duration": "Oct 07,2021",
     "des": "This a website for your next trip. It has the back-end & user can book their next trip ticket.  CI/CD has implemented to test API. Frontend and backend is hosted on AWS EC2 server. So that you can know more about the place you visit.",
@@ -73,21 +73,21 @@
   },
   {
     "id": 4,
-    "name": "Amazon-Simple-Cart",
-    "img": "https://i.postimg.cc/jq30L7NY/emajon.png",
+    "name": "https://healthcare-services-c55cf.web.app/",
+    "img": "https://i.ibb.co/1XzCTBC/health-1.png",
     "duration": "Oct 01,2021",
-    "des": "User can come here and buy their products. This fully build with react js. Also User can place order. We provide a simple cart system for user. A simple search system for user",
-    "client_side_code": "https://github.com/coderboy-raiyan/amazon-simple-cart",
-    "live_link": "https://simple-amazon-cart.netlify.app/",
+    "des": "Those who are concerned about their health will be benefited from this website. Protected route only accessible by registered user. Users can create and edit appointments, as well as delete them",
+    "client_side_code": "https://github.com/AwalHossain/-healthcare-related-website-AwalHossain",
+    "live_link": "https://healthcare-services-c55cf.web.app/home",
     "technology": [
       "React js",
       "React-Bootstrap",
       "React router dom"
     ],
     "demo_img": [
-      "https://i.postimg.cc/jq30L7NY/emajon.png",
-      "https://i.postimg.cc/NM8vPJC3/emajon-3.png",
-      "https://i.postimg.cc/MTJ85250/emajon2.png"
+      "https://i.ibb.co/1XzCTBC/health-1.png",
+      "https://i.ibb.co/cCfrsf0/health-2.png",
+      "https://i.ibb.co/zRn7Z3G/health-3.png"
     ]
   }
 ]
