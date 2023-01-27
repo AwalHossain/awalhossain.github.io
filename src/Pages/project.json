@@ -27,23 +27,23 @@
     "name": "Bhuiyan-Trading(Team Project)",
     "img": "https://i.ibb.co/mtjsf2T/media-2.png",
     "duration": "Oct 07,2021",
-    "des": "This a website for your next trip. It has the back-end & user can book their next trip ticket.  CI/CD has implemented to test API. Frontend and backend is hosted on AWS EC2 server. So that you can know more about the place you visit.",
-    "client_side_code": "https://github.com/coderboy-raiyan/tourism-client-side-full-stack-web",
-    "server_side_code": "https://github.com/coderboy-raiyan/tourism-server-side-code",
+    "des": "This site provides all kind marine Automation, Navigation, Hydraulic Pump and motor, Com pressure, Fire detection system etc.  Fully customized admin dashboard for maintain all the products, contacts & post blog releted to products. Designed and implemented scalable APIs using node js and express. States are handled the with help of Redux",
+    "client_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Client",
+    "server_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Server",
     "live_link": "https://traveler-7f312.web.app/",
     "technology": [
       "React js",
       "Node js",
       "Express js",
-      "MongoDb",
-      "Firebase",
-      "React Bootstrap",
-      "Full Stack"
+      "React Router",
+      "MySql",
+      "Tailwind CSS",
+      "Redux"
     ],
     "demo_img": [
-      "https://i.postimg.cc/kg5XfL3L/health-3.png",
-      "https://i.postimg.cc/TPL2XmP9/health-1.png",
-      "https://i.postimg.cc/VNxfs6rc/health-2.png"
+      "https://i.ibb.co/Ms2fk0S/trad-1.png",
+      "https://i.ibb.co/89CR9Nk/trad-2.png",
+      "https://i.ibb.co/1ZGYKb2/trad-3.png"
     ]
   },
   {
