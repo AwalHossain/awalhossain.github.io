@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="flex items-center justify-start flex-col lg:flex-row">
             <div className="rounded-full w-2/4 md:w-72 sm:w-72 lg:w-72 flex-shrink-0 mx-auto my-3 lg:mx-0 xl:mx-0">
               <img
-                src="https://avatars.githubusercontent.com/u/76396442?v=4"
+                src="https://i.ibb.co/2YDy0SX/IMG-1029-min.jpg"
                 alt=""
                 className="rounded-full"
               />
