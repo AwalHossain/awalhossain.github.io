@@ -41,8 +41,8 @@ const TechStacks = () => {
       img: "https://i.postimg.cc/nLzfCPNG/logo.png",
     },
     {
-      name: "CSS3",
-      img: "https://i.postimg.cc/wvQMgPNc/image.png",
+      name: "MySql",
+      img: "https://i.ibb.co/frTT8Y2/My-SQL-Logo.png",
     },
     {
       name: "Bootstrap",
