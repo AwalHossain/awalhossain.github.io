@@ -83,7 +83,7 @@ const Header = () => {
                   className="btn"
                   onClick={() =>
                     window.open(
-                      "https://drive.google.com/u/0/uc?id=1IOpG6du8CIztxO2acpoJ1jJsPl325vNt&export=download"
+                      "https://drive.google.com/file/d/1f8J7EDNq9dIkC3DnXLBAbNny0y55qVBU/view?usp=sharing"
                     )
                   }
                 >
