@@ -41,7 +41,7 @@ const Hero = () => {
               <h5 className="font-light text-gray-800 text-tighter  my-3">
                 <Typical
                   steps={[
-                    "Hello, My gorgeous friends I'm Raiyan",
+                    "Hello, My gorgeous friends I'm Awal",
                     1500,
                     "I'm MERN Stack Developer",
                     1500,
