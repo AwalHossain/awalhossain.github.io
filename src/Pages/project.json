@@ -30,7 +30,7 @@
     "des": "This site provides all kind marine Automation, Navigation, Hydraulic Pump and motor, Com pressure, Fire detection system etc.  Fully customized admin dashboard for maintain all the products, contacts & post blog releted to products. Designed and implemented scalable APIs using node js and express. States are handled the with help of Redux",
     "client_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Client",
     "server_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Server",
-    "live_link": "https://traveler-7f312.web.app/",
+    "live_link": "https://bhuiyan-trading.vercel.app/",
     "technology": [
       "React js",
       "Node js",
