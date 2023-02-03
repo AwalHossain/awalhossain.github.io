@@ -24,26 +24,25 @@
   },
   {
     "id": 2,
-    "name": "Bhuiyan-Trading(Team Project)",
-    "img": "https://i.ibb.co/Ms2fk0S/trad-1.png",
-    "duration": "Oct 07,2021",
-    "des": "This site provides all kind marine Automation, Navigation, Hydraulic Pump and motor, Com pressure, Fire detection system etc.  Fully customized admin dashboard for maintain all the products, contacts & post blog releted to products. Designed and implemented scalable APIs using node js and express. States are handled the with help of Redux",
-    "client_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Client",
-    "server_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Server",
-    "live_link": "https://bhuiyan-trading.vercel.app/",
+    "name": "Uptime Monitoring",
+    "img": "https://i.ibb.co/bd3JmJH/nasa-1.png",
+    "duration": "Sep 29, 2022",
+    "des": "Built applications in raw NodeJs with no frameworks, and no external libraries. Built a command-line application that takes user-inputs from the console, processes them, and writes outputs back out.To build this, i have used Node’s Readline, Events, TTY, V8, and OS modules.",
+    "client_side_code": "https://github.com/AwalHossain/Nasa_Project",
+    "server_side_code": "https://github.com/AwalHossain/Nasa_Project",
+    "live_link": "http://3.93.190.153:8000/",
     "technology": [
-      "React js",
-      "Node js",
-      "Express js",
-      "React Router",
-      "MySql",
-      "Tailwind CSS",
-      "Redux"
+      "ReactJS",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDb",
+      "AWS",
+      "Docker"
     ],
     "demo_img": [
-      "https://i.ibb.co/Ms2fk0S/trad-1.png",
-      "https://i.ibb.co/89CR9Nk/trad-2.png",
-      "https://i.ibb.co/1ZGYKb2/trad-3.png"
+      "https://i.ibb.co/BwMSqtZ/uptime-1.png",
+      "https://i.ibb.co/z4RJh2s/uptime-2.png",
+      "https://i.ibb.co/phdxy0q/uptime-3.png"
     ]
   },
   {
@@ -73,6 +72,30 @@
   },
   {
     "id": 4,
+    "name": "Bhuiyan-Trading(Team Project)",
+    "img": "https://i.ibb.co/Ms2fk0S/trad-1.png",
+    "duration": "Oct 07,2021",
+    "des": "This site provides all kind marine Automation, Navigation, Hydraulic Pump and motor, Com pressure, Fire detection system etc.  Fully customized admin dashboard for maintain all the products, contacts & post blog releted to products. Designed and implemented scalable APIs using node js and express. States are handled the with help of Redux",
+    "client_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Client",
+    "server_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Server",
+    "live_link": "https://bhuiyan-trading.vercel.app/",
+    "technology": [
+      "React js",
+      "Node js",
+      "Express js",
+      "React Router",
+      "MySql",
+      "Tailwind CSS",
+      "Redux"
+    ],
+    "demo_img": [
+      "https://i.ibb.co/Ms2fk0S/trad-1.png",
+      "https://i.ibb.co/89CR9Nk/trad-2.png",
+      "https://i.ibb.co/1ZGYKb2/trad-3.png"
+    ]
+  },
+  {
+    "id": 5,
     "name": "Health-Coach",
     "img": "https://i.ibb.co/1XzCTBC/health-1.png",
     "duration": "Oct 01,2021",
