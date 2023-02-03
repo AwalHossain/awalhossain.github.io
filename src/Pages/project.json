@@ -32,12 +32,11 @@
     "server_side_code": "https://github.com/AwalHossain/Nasa_Project",
     "live_link": "http://3.93.190.153:8000/",
     "technology": [
-      "ReactJS",
-      "NodeJS",
-      "ExpressJS",
-      "MongoDb",
-      "AWS",
-      "Docker"
+      "Node’s Readline",
+      "Events",
+      "TTY",
+      "V8",
+      "OS modules"
     ],
     "demo_img": [
       "https://i.ibb.co/BwMSqtZ/uptime-1.png",
@@ -74,7 +73,7 @@
     "id": 4,
     "name": "Bhuiyan-Trading(Team Project)",
     "img": "https://i.ibb.co/Ms2fk0S/trad-1.png",
-    "duration": "Oct 07,2021",
+    "duration": "Oct 07,2022",
     "des": "This site provides all kind marine Automation, Navigation, Hydraulic Pump and motor, Com pressure, Fire detection system etc.  Fully customized admin dashboard for maintain all the products, contacts & post blog releted to products. Designed and implemented scalable APIs using node js and express. States are handled the with help of Redux",
     "client_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Client",
     "server_side_code": "https://github.com/blooming-volcanoes/Bhuiyan-Trading-Server",
