@@ -27,7 +27,7 @@
     "name": "Uptime Monitoring",
     "img": "https://i.ibb.co/bd3JmJH/nasa-1.png",
     "duration": "Sep 29, 2022",
-    "des": "Built applications in raw NodeJs with no frameworks, and no external libraries. Built a command-line application that takes user-inputs from the console, processes them, and writes outputs back out.To build this, i have used Node’s Readline, Events, TTY, V8, and OS modules.",
+    "des": "Design and developed application for monitoring the Url in raw NodeJs with no frameworks, and no external libraries. Built applications in raw NodeJs with no frameworks, and no external libraries. Built a command-line application that takes user-inputs from the console, processes them, and writes outputs back out.To build this, i have used Node’s Readline, Events, TTY, V8, and OS modules.",
     "client_side_code": "https://github.com/AwalHossain/Nasa_Project",
     "server_side_code": "https://github.com/AwalHossain/Nasa_Project",
     "live_link": "http://3.93.190.153:8000/",
