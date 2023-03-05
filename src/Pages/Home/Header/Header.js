@@ -71,10 +71,10 @@ const Header = () => {
                     color: "red",
                   }}
                   className="text-gray-600 font-medium "
-                  to="/contactus"
+                  to="/contactme"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Contact us
+                  Contact me
                 </NavLink>
               </li>
               <li>
@@ -155,7 +155,7 @@ const Header = () => {
                     color: "red",
                   }}
                   className="text-gray-600 text-3xl font-medium md:text-7xl"
-                  to="/contactus"
+                  to="/contactme"
                   onClick={() => {
                     setIsClicked(!isClicked);
                     window.scrollTo(0, 0);
@@ -164,11 +164,11 @@ const Header = () => {
                   Contact me
                 </NavLink>
               </li>
-              <li>
-                <NavLink to="/contactus">
+              {/* <li>
+                <NavLink to="/contactme">
                   <button className="btn text-gray-600">Let's talk</button>
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <button
                   type="submit"
