@@ -32,7 +32,6 @@
     "des": "MERN Video Streaming is a cutting-edge, open-source platform for video streaming, offering a comprehensive, full-stack solution utilizing the latest MERN stack technologies. With MERN Video Streaming, users can easily upload, manage, and stream videos on demand, providing a seamless experience. This project features a video processing capability that provides real-time notifications upon completion ",
     "client_side_code": "https://github.com/AwalHossain/Video_Streaming_With_MERN",
     "server_side_code": "https://github.com/AwalHossain/Video_Streaming_With_MERN",
-    "live_link": "https://blooming-volcanoes.vercel.app/",
     "technology": [
       "ReactJS",
       "NodeJS",

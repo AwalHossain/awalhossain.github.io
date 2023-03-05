@@ -67,14 +67,16 @@ const SingalProject = ({ project }) => {
 
         {/* Links of codes */}
         <div className="flex items-center flex-wrap lg:justify-start space-x-2  my-3  justify-center">
-          <a
-            href={project.live_link}
-            target="_blank"
-            rel="noreferrer"
-            className="btn text-xs p-2 lg:my-0 "
-          >
-            <FaPlay className="inline" /> Demo
-          </a>
+         {
+            project.live_link ? <a
+              href={project.live_link}
+              target="_blank"
+              rel="noreferrer"
+              className="btn text-xs p-2 lg:my-0 "
+            >
+              <FaPlay className="inline" /> Demo
+            </a> : ""
+         } 
           <a
             href={project.client_side_code}
             target="_blank"
