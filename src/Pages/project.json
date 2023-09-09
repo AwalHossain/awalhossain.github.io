@@ -16,9 +16,33 @@
       "Tailwind CSS"
     ],
     "demo_img": [
-      "https://i.ibb.co/0m0K5gn/screencapture-bookishly-netlify-app-add-Book-2023-09-09-15-54-18.png",
-      "https://i.ibb.co/GdxfzC1/screencapture-bookishly-netlify-app-readinglist-2023-09-09-15-51-06.png",
-      "https://i.ibb.co/KqJGY1W/screencapture-bookishly-netlify-app-book-details-64cdcfe3211907f4a4b6cd75-2023-09-09-15-49-00.png"
+      "https://i.ibb.co/v1r06vt/bookly-1.png",
+      "https://i.ibb.co/rpLgCL6/bookly-2.png",
+     " https://i.ibb.co/dpR1s19/Bookly-3.png",
+      "https://i.ibb.co/8PyXBbN/bookly-4.png"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dev-Blog",
+    "img": "https://i.ibb.co/r03xYzV/Blog.png",
+    "duration": "july 15, 2023",
+    "des": "Dev-Blog is a user-friendly blog site featuring several blogs on various topics related to development. The site utilizes a grid system to display all the blogs, allowing users to filter and sort them based on their preferences",
+    "client_side_code": "https://github.com/AwalHossain/Dev-Blog",
+    "server_side_code": "https://github.com/AwalHossain/Dev-Blog",
+    "live_link": "https://funblogging.netlify.app/",
+    "technology": [
+      "ReactJS",
+      "NodeJS",
+      "MongoDB",
+      "RTK",
+      "Tailwind CSS"
+    ],
+    "demo_img": [
+      "https://i.ibb.co/r03xYzV/Blog.png",
+      "https://i.ibb.co/2FTLNF7/Blog-1.png",
+      "https://i.ibb.co/v1Vbn2R/blog-3.png",
+      "https://i.ibb.co/kcRry1t/blog-4.png"
     ]
   },
  
