@@ -1,4 +1,26 @@
 [
+  {
+    "id": 1,
+    "name": "Bookish",
+    "img": "https://i.ibb.co/0yjmz6f/Screenshot-2023-09-09-153412.png",
+    "duration": "August 12, 2023",
+    "des": "Bookish is a web application that allows users to discover, review, and manage books",
+    "client_side_code": "https://github.com/AwalHossain/Bookish",
+    "server_side_code": "https://github.com/AwalHossain/Bookish",
+    "live_link": "https://bookishly.netlify.app/",
+    "technology": [
+      "ReactJS",
+      "NodeJS",
+      "MongoDB",
+      "RTK",
+      "Tailwind CSS"
+    ],
+    "demo_img": [
+      "https://i.ibb.co/0m0K5gn/screencapture-bookishly-netlify-app-add-Book-2023-09-09-15-54-18.png",
+      "https://i.ibb.co/GdxfzC1/screencapture-bookishly-netlify-app-readinglist-2023-09-09-15-51-06.png",
+      "https://i.ibb.co/KqJGY1W/screencapture-bookishly-netlify-app-book-details-64cdcfe3211907f4a4b6cd75-2023-09-09-15-49-00.png"
+    ]
+  },
  
   {
     "id": 2,
@@ -97,6 +119,31 @@
       "https://i.ibb.co/BwMSqtZ/uptime-1.png",
       "https://i.ibb.co/z4RJh2s/uptime-2.png",
       "https://i.ibb.co/phdxy0q/uptime-3.png"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "GrabBug (Team Project)",
+    "img": "https://i.ibb.co/PN1HwqV/grab-Bug-1.png",
+    "duration": "Sep 29, 2021",
+    "des": "A software development tool that be used to log and monitor bugs or errors during software development and testing. Custom authentication with OTP validation and SMS to mobile when a critical issue arises. Responsible for dynamic Graph and Charts Logic so that users can visualize the data. Users can able to chat with audio & video call feature with screen sharing option. Emmergency problem will be notified by twilio sms service",
+    "client_side_code": "https://github.com/blooming-volcanoes/GrabBug-Client",
+    "server_side_code": "https://github.com/blooming-volcanoes/GrabBug-Server",
+    "live_link": "https://blooming-volcanoes.vercel.app/",
+    "technology": [
+      "ReactJS",
+      "NodeJS",
+      "webRtc",
+      "Redux",
+      "Tailwind CSS",
+      "Socket.io",
+      "PeerJS",
+      "Twilio"
+    ],
+    "demo_img": [
+      "https://i.ibb.co/PN1HwqV/grab-Bug-1.png",
+      "https://i.ibb.co/nbT4YtX/grab-Bug-2.png",
+      "https://i.ibb.co/C6pyJ4M/grab-Bug-3.png"
     ]
   }
 ]
