@@ -11,7 +11,7 @@ const Header = (props: HeaderProps): React.ReactElement => {
 
     return (
         <header className={`flex flex-row items-center ${className}`}>
-            <div className="mr-6">
+            <div className="mr-auto">
                 <Logo />
             </div>
             <nav>
