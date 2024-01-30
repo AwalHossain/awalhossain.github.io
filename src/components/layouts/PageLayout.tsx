@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../shared/Footer';
 import Header from '../shared/Header';
 
 type PageLayoutProps = {
@@ -19,7 +20,7 @@ const PageLayout = (props: PageLayoutProps): React.ReactElement | null => {
                 <article className="px-6 sm:px-12 py-6">
                     {children}
                 </article>
-                {/* <Footer className="px-6 sm:px-12 py-12" /> */}
+                <Footer className="px-6 sm:px-12 py-12" />
             </div>
         </main>
     );
