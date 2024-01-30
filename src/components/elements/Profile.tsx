@@ -16,7 +16,7 @@ const Profile = (props: ProfilProps): React.ReactElement => {
     const { profile } = props;
 
     const avatarElement = profile.avatar ? (
-        <div className='mr-0 mb-6 m:mr-6 sm:mb-0'>
+        <div className='mr-0 mb-6 sm:mr-6 sm:mb-0 text-center'>
             <Avatar avatar={profile.avatar} className="w-64 h-64 rounded-full overflow-hidden" />
         </div>
     ) : null;
@@ -77,7 +77,7 @@ const Profile = (props: ProfilProps): React.ReactElement => {
 
     return (
         <div>
-            <div className="flex flex-col items-center sm:flex-row mb-12">
+            <div className="flex justify-center flex-col items-center sm:flex-row mb-12">
                 {avatarElement}
                 <div className="flex flex-col justify-center items-center sm:items-start">
                     {userNameElement}
