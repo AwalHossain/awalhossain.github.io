@@ -34,12 +34,15 @@
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
+    "@types/gatsbyjs__reach-router": "^2.0.4",
     "@types/node": "^20.11.5",
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
+    "@types/react-helmet": "^6.1.11",
     "typescript": "^5.3.3"
   }
 }
