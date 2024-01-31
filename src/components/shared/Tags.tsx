@@ -1,5 +1,6 @@
 import React from 'react'
 import type { Tag as TagType } from '../../types/Tag'
+import Expander from './Expander'
 import Tag from './Tag'
 
 type TagsProps = {
@@ -10,28 +11,36 @@ type TagsProps = {
 
 const Tags = (props: TagsProps): React.ReactElement | null => {
 
-    const { tags, className, numToShow } = props;
+    const { tags, className = '', numToShow = Infinity } = props;
+
+    console.log(numToShow, "numToShow");
 
     if (!tags) return null;
 
     const defaultClasses = " ";
 
-    const classNames = `${defaultClasses} ${className}`;
+    const classes = `${defaultClasses} ${className}`;
 
-    const onRender = (tag: TagType, index: number): React.ReactElement => {
 
-        return <Tag tag={tag} key={tag.name} />
-    }
-
-    const toHide = (index: number): boolean => {
-        if (!numToShow) return false;
+    const onRender = (tag: TagType): React.ReactElement => {
+        return (
+            <Tag key={tag.name} tag={tag} />
+        );
+    };
+    const toHide = (tag: TagType, index: number): boolean => {
         return index >= numToShow;
     }
 
-
     return (
-        <div>Tags</div>
-    )
+        <div className={classes}>
+            <Expander
+                items={tags}
+                toHide={toHide}
+                onRender={onRender}
+                itemClassName="mr-2 mb-2"
+            />
+        </div>
+    );
 }
 
 export default Tags
