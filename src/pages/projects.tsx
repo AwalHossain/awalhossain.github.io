@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const projects = (): React.ReactElement => {
+
+import ProjectScreens from '../components/screens/ProjectScreens';
+import { projects } from '../data/projects';
+
+const Projects = (): React.ReactElement => {
     return (
-        <div>projects</div>
-    )
-}
+        <ProjectScreens projects={projects} />
+    );
+};
 
-export default projects
+export default Projects;
