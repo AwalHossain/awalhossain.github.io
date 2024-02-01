@@ -61,7 +61,7 @@ const ProjectPreview = (props: ProjectPreviewProps): React.ReactElement | null =
         </div>
     ) : null;
 
-    const defaultProjectUrl = project.archived ? undefined : project.demoURL;
+    const defaultProjectUrl = project.archived ? undefined : getProjectDetailsLink(project.id);
     const demoLink = project.demoURL && !project.archived ? (
         <ButtonLink
             link={project.demoURL}
@@ -168,13 +168,9 @@ const ProjectPreview = (props: ProjectPreviewProps): React.ReactElement | null =
                     <div>
                         {projectDates}
                     </div>
-                    <div>
-                        "stars"
-                    </div>
                 </Row>
                 {projectSummary}
                 {projectTags}
-                {achievementsLink}
                 {externalLinks}
             </CardContent>
             {actions}
