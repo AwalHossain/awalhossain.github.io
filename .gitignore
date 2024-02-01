@@ -1,4 +1,7 @@
 node_modules/
 .cache/
 public
+.idea
+.vscode
+.DS_Store
 src/gatsby-types.d.ts
