@@ -55,6 +55,9 @@ const getDefaultSortOption = (): SortOption => {
     return defaultOption;
 };
 
+console.log(getDefaultSortOption(), "defaultOption");
+
+
 const ProjectScreens = (props: ProjectsScreenProps): React.ReactElement => {
     const { projects } = props;
 
@@ -73,7 +76,9 @@ const ProjectScreens = (props: ProjectsScreenProps): React.ReactElement => {
     useEffect(() => {
         const sortedProjects = [...filteredProjects].sort(projectSorters[sortBy].sort);
         setFilteredProjects(sortedProjects);
+        console.log([...filteredProjects].sort(projectSorters[sortBy].sort), "filteredProjects new one");
     }, [sortBy]);
+
 
     const projectsNum = filteredProjects.length;
     return (
