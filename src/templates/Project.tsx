@@ -19,8 +19,6 @@ const Project = (props: ProjectProps): React.ReactElement => {
         ? projects[projectID]
         : null;
 
-    console.log(project, projectID, 'project and projectID');
-
 
     return (
         <ProjectScreen project={project} />
