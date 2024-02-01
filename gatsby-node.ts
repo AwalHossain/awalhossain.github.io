@@ -9,7 +9,6 @@ async function createProjectPages(args: CreatePagesArgs): Promise<void> {
     const { actions } = args;
     const { createPage } = actions;
     projectMapToArray(projects).forEach((project: Project) => {
-        console.log(project.id, "checking project");
 
         createPage({
             path: `${routes.projects.path}/${project.id}`,
