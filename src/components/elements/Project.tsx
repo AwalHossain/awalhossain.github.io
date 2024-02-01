@@ -12,6 +12,7 @@ import FluidImage from '../shared/FluidImage';
 import HyperLink from '../shared/HyperLink';
 import Row from '../shared/Row';
 import Tags from '../shared/Tags';
+import PhotoGrids from './PhotoGrids';
 
 type ProjectProps = {
     project: ProjectType
@@ -105,7 +106,10 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
     const actions = demoLink || sourceCodeClient ? (
         <Row className="py-6">
             {demoLink}
-            {sourceCodeClient}
+            <Row className='space-x-4'>
+                {sourceCodeClient}
+                {sourceCodeServer}
+            </Row>
         </Row>
     ) : null;
 
@@ -138,21 +142,27 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
             <div>
                 {projectDates}
             </div>
-            <div>
-                "starts"
-            </div>
         </Row>
     );
 
-    // const projectAchievements = (
-    //     <ProjectAchievements
-    //         achievements={project?.achievements}
-    //     />
-    // );
+    const projectAchievements = (
+        <PhotoGrids
+            details={project?.details}
+        />
+    );
 
 
     return (
-        <div>Project</div>
+        <>
+            {projectCoverCard}
+            {projectDatesAndStars}
+            {projectSummary}
+            {projectTags}
+            {externalLinks}
+            {actions}
+            {archivedStamp}
+            {projectAchievements}
+        </>
     )
 }
 
