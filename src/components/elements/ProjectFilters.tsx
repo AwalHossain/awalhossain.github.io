@@ -18,11 +18,11 @@ type Sorters = Record<SortOption, Sorter>
 
 const sorters: Sorters = {
     [sortByStartDateAsc]: {
-        title: '➚ start date',
-        hidden: true,
+        title: '➚ ASC',
+        hidden: false,
     },
     [sortByStartDateDesc]: {
-        title: '➘ start date',
+        title: '➘ DESC',
 
     }
 }
