@@ -35,13 +35,13 @@ const gatsbyConfig: GatsbyConfig = {
     },
 
     // @see: https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     name: 'posts',
-    //     path: `${__dirname}/src/posts`,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'posts',
+        path: `${__dirname}/src/posts`,
+      },
+    },
 
     // @see: https://www.gatsbyjs.com/plugins/gatsby-source-filesystem/
     {
