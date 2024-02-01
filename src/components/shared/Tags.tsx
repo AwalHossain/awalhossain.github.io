@@ -13,7 +13,6 @@ const Tags = (props: TagsProps): React.ReactElement | null => {
 
     const { tags, className = '', numToShow = Infinity } = props;
 
-    console.log(numToShow, "numToShow");
 
     if (!tags) return null;
 
