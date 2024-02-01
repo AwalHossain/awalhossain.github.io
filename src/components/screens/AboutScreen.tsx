@@ -5,6 +5,7 @@ import Profile from '../elements/Profile';
 import PageLayout from '../layouts/PageLayout';
 // import SEO from '../shared/SEO';
 import ErrorBoundary from '../shared/ErrorBoundary';
+import SEO from '../shared/SEO';
 
 type AboutScreenProps = {
     profile: ProfileType,
@@ -17,10 +18,10 @@ const AboutScreen = (props: AboutScreenProps): React.ReactElement => {
 
     return (
         <PageLayout>
-            {/* <SEO
+            <SEO
                 title={`${profile.position}. ${summary}`}
                 description={`${profile.firstName} ${profile.lastName}. ${profile.position}. ${summary}`}
-            /> */}
+            />
             <ErrorBoundary>
                 <Profile profile={profile} />
             </ErrorBoundary>
