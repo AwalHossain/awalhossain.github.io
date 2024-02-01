@@ -16,7 +16,6 @@ export function projectMapToArray(projects: Projects): Project[] {
 
 
 export function getProjectDetailsLink(projectID: ProjectID): Link {
-    console.log("getProjectDetailsLink", projectID);
 
     return {
         url: `${routes.projects.path}/${projectID}#details`,
