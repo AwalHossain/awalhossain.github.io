@@ -1,6 +1,7 @@
 import { FiBriefcase } from '@react-icons/all-files/fi/FiBriefcase';
 import React from 'react';
 import type { Profile as ProfileType } from '../../types/Profile';
+import TechStacks from '../home/TechStacks';
 import Avatar from '../shared/Avatar';
 import Greeting from '../shared/Greetings';
 import H, { hLevel } from '../shared/H';
@@ -90,6 +91,7 @@ const Profile = (props: ProfilProps): React.ReactElement => {
             </div>
             <div>
                 <Greeting />
+                <TechStacks />
             </div>
         </div>
     )
