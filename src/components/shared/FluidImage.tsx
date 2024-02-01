@@ -14,12 +14,15 @@ const FluidImage = (props: FluidImageProps): React.ReactElement | null => {
     const { image, fluidImage: fluidImageProvided, className = '' } = props;
 
     const fluidImageFetched = useFluidCover({ imagePath: image?.srcPath });
+
     const fluidImage = fluidImageProvided || fluidImageFetched;
+
 
     if (!fluidImage) {
         // @TODO: Consider to return an image placeholder.
         return null;
     }
+
 
     return (
         <GatsbyImage
