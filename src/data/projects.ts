@@ -35,13 +35,13 @@ export const projects = {
         details: [
             {
                 title: 'Video upload and processing',
-                image: { srcPath: 'projects/video-streaming/upload.png' },
+                image: { srcPath: 'projects/video-streaming/up.png' },
                 date: '2024-01-30',
                 link: { url: 'https://news.ycombinator.com/front?day=2021-04-16', caption: 'Hacker News archive' },
             },
             {
                 title: 'Video streaming',
-                image: { srcPath: 'projects/video-streaming/player.png' },
+                image: { srcPath: 'projects/video-streaming/pl.png' },
                 date: '2021-01-30',
                 link: { url: 'https://www.producthunt.com/posts/js-image-carver', caption: 'Product page' },
             },
@@ -80,13 +80,13 @@ export const projects = {
         details: [
             {
                 title: 'Video upload and processing',
-                image: { srcPath: 'projects/video-streaming/upload.png' },
+                image: { srcPath: 'projects/video-streaming/up.png' },
                 date: '2024-01-30',
                 link: { url: 'https://news.ycombinator.com/front?day=2021-04-16', caption: 'Hacker News archive' },
             },
             {
                 title: 'Video streaming',
-                image: { srcPath: 'projects/video-streaming/player.png' },
+                image: { srcPath: 'projects/video-streaming/pl.png' },
                 date: '2021-01-30',
                 link: { url: 'https://www.producthunt.com/posts/js-image-carver', caption: 'Product page' },
             },
@@ -101,8 +101,8 @@ export const projects = {
         },
         demoURL: { url: "https://bookishly.netlify.app/" },
         cover: { srcPath: 'projects/video-streaming/cover.png' },
-        startDate: '2023-06-25',
-        endDate: '2024-01-25',
+        startDate: '2024-01-25',
+        endDate: '2024-01-29',
         summary: [
             'MERN Video Streaming is a cutting-edge, open-source platform for video streaming',
         ],
@@ -139,15 +139,15 @@ export const projects = {
     },
     'BookKeeper-a-book-management-site-3': {
         id: 'BookKeeper-a-book-management-site-3',
-        name: '📚 BookKeeper- a book management site',
+        name: '📚 Bookish ly',
         server: { url: "https://github.com/AwalHossain/Bookish" },
         client: {
             url: "https://github.com/AwalHossain/Bookish"
         },
         demoURL: { url: "https://bookishly.netlify.app/" },
         cover: { srcPath: 'projects/video-streaming/cover.png' },
-        startDate: '2023-06-25',
-        endDate: '2024-01-25',
+        startDate: '2022-06-25',
+        // endDate: '2023-01-25',
         summary: [
             'MERN Video Streaming is a cutting-edge, open-source platform for video streaming',
         ],
