@@ -86,7 +86,7 @@ const ProjectPreview = (props: ProjectPreviewProps): React.ReactElement | null =
             link={project.server}
             startEnhancer={<FaGithub />}
         >
-            Client
+            Server
         </ButtonLink>
     ) : null;
 
