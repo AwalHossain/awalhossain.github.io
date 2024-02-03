@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Project as ProjectType, Projects as ProjectsType } from '../../types/Project';
 import { projectMapToArray } from '../../utils/projects';
 import { getStringSearchParam, setSearchParam } from '../../utils/url';
-import ProjectFilters, { SortOption, sortByStartDateAsc, sortByStartDateDesc, supportedSortOptions } from '../elements/ProjectFilters';
+import ProjectFilters, { SortOption, sortByEndDateAsc, sortByEndDateDesc, supportedSortOptions } from '../elements/ProjectFilters';
 import ProjectsList from '../elements/ProjectsList';
 import PageLayout from '../layouts/PageLayout';
 import Badge from '../shared/Badge';
@@ -26,27 +26,27 @@ const SORT_PARAM_NAME = 'sort';
 
 // @ts-ignore
 const projectSorters: ProjectSorters = {
-    [sortByStartDateDesc]: {
+    [sortByEndDateDesc]: {
         sort: (a: ProjectType, b: ProjectType): number => {
-            if (!a?.startDate || !b.startDate || a.startDate === b.startDate) {
+            if (!a?.endDate || !b.endDate || a.endDate === b.endDate) {
                 return 0;
             }
-            return a.startDate > b.startDate ? -1 : 1;
+            return a.endDate > b.endDate ? -1 : 1;
         },
     },
-    [sortByStartDateAsc]: {
+    [sortByEndDateAsc]: {
         sort: (a: ProjectType, b: ProjectType): number => {
-            if (!a?.startDate || !b.startDate || a.startDate === b.startDate) {
+            if (!a?.endDate || !b.endDate || a.endDate === b.endDate) {
                 return 0;
             }
-            return a.startDate < b.startDate ? -1 : 1;
+            return a.endDate < b.endDate ? -1 : 1;
         },
     },
 
 };
 
 const getDefaultSortOption = (): SortOption => {
-    const defaultOption = sortByStartDateDesc;
+    const defaultOption = sortByEndDateDesc;
     // @ts-ignore
     const sortFromURL: SortOption = getStringSearchParam(SORT_PARAM_NAME, defaultOption);
     if (supportedSortOptions.includes(sortFromURL)) {
