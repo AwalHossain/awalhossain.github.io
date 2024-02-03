@@ -1,0 +1,43 @@
+---
+title: "How does the Javascript engine work?"
+
+summary: " In-depth explanation of how JavaScript engines work, focusing on Google's V8 engine. It discusses the process of lexical analysis, the role of interpreters and compilers, and the concept of Just-In-Time (JIT) compilation for optimizing JavaScript execution"
+
+cover: assets/engine.jpg
+
+date: 2022-08-07
+---
+
+Ryan Dhal created NodeJs in 2009 using the Chrome V8 engine and a C++ library called `libuv`. But before a deep dive into NodeJs, you must first understand how Javascript works. Let's start by talking about the chrome V8 engine.
+
+V8 is the name of the Javascript engine that powers the Google Chrome browser. This engine takes our Javascript code and executes it while browsing with Chrome. V8 provides the runtime environment in which JavaScript executes. There are several Javascript engines, which you will find for each major internet browser.
+
+1. V8 – Open-source JavaScript Engine developed by Google
+2. SpiderMonkey – The JavaScript Engine powering Mozilla Firefox
+3. JavaScriptCore–Open-source JavaScript Engine developed by Apple
+4. Rhino – Open-source JavaScript Engine managed by Mozilla
+5. Chakra– A JavaScript Engine for Microsoft Edge
+6. JerryScript – A JavaScript engine for the Internet of Things (Iot).
+
+![Javascript Engine](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7n4txhci8ydhq63l33ur.jpg)
+
+## Now,Let's see what's actually happening inside these engine.
+
+When we deliver a Javascript file inside this engine, first it does something called [lexical analysis](https://www.geeksforgeeks.org/introduction-of-lexical-analysis/), which breaks the code into something called tokens to identify their meaning, so that the engine can know what the code is trying to do.
+
+These tokens are formed into what we call an [AST](https://www.twilio.com/blog/abstract-syntax-trees) (abstract syntax tree) and once it is formed, it goes through something called interpreter, profiler, and compiler.
+
+The interpreter converts each high-level program statement one by one into machine code, but when it interprets the same lines of code a few times, it gets slower. But when the compiler sees the same code running again and again, it just replaces the function with the exact result that we want to return. And these sorts of edits that compiler do are called optimizations.
+
+**Interpreter Or Compiler. Which one is Faster??**
+
+Both the interpreter and the compiler have advantages and disadvantages. It takes a little longer for the compiler to start up, but the code will eventually execute quicker. An interpreter, on the other hand, can get up and running quite quickly. However, it does not do any optimizations.
+
+> `JIT Compiler`
+> In order to resolve this issue, Google came up with a solution. They invented a JIT compiler, or just in time compiler, by combining compiler and interpreter, and this is exactly what browsers started doing. Browsers started mixing compilers, specifically this JIT compilers, for just in time compilation to make the engines faster.
+
+Now, if the same lines of code are executed a few times, the interpreter will tell the compiler, "Hey, here's some code for you to optimize," and the compiler will take it on. The compiler either compiles or modifies the code. So, interpreter allows us to run the code right away, and the compiler and profiler allows us to optimize the code.
+
+After going through the interpreter, profiler, and compiler, the entire engine will spit out code that our CPU will understand, which will then be shown on our monitor and that's how Javascript engine actually works.
+
+> In the following part, I'll explain how libuv interacts with NodeJs.
