@@ -13,16 +13,20 @@ type FluidImageProps = {
 const FluidImage = (props: FluidImageProps): React.ReactElement | null => {
     const { image, fluidImage: fluidImageProvided, className = '' } = props;
 
-    const fluidImageFetched = useFluidCover({ imagePath: image?.srcPath });
-
-    const fluidImage = fluidImageProvided || fluidImageFetched;
-
+    let fluidImage;
+    if (image?.srcPath?.startsWith('http') || image?.srcPath?.startsWith('https')) {
+        // srcPath is a direct image link
+        fluidImage = fluidImageProvided;
+    } else {
+        // srcPath is a local image path
+        const fluidImageFetched = useFluidCover({ imagePath: image?.srcPath });
+        fluidImage = fluidImageProvided || fluidImageFetched;
+    }
 
     if (!fluidImage) {
         // @TODO: Consider to return an image placeholder.
         return null;
     }
-
 
     return (
         <GatsbyImage
