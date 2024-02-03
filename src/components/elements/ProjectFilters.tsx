@@ -1,11 +1,11 @@
 import React, { ChangeEvent } from 'react';
 import Row from '../shared/Row';
 
-export type SortOption = "startDateAsc" | "startDateDesc";
+export type SortOption = "endDateAsc" | "endDateDesc";
 
 
-export const sortByStartDateAsc: SortOption = 'startDateAsc';
-export const sortByStartDateDesc: SortOption = 'startDateDesc';
+export const sortByEndDateAsc: SortOption = 'endDateAsc';
+export const sortByEndDateDesc: SortOption = 'endDateDesc';
 
 
 type Sorter = {
@@ -17,11 +17,11 @@ type Sorters = Record<SortOption, Sorter>
 
 
 const sorters: Sorters = {
-    [sortByStartDateAsc]: {
+    [sortByEndDateAsc]: {
         title: '➚ ASC',
         hidden: false,
     },
-    [sortByStartDateDesc]: {
+    [sortByEndDateDesc]: {
         title: '➘ DESC',
 
     }
