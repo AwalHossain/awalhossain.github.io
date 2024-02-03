@@ -10,7 +10,7 @@ export const projects = {
             url: "https://github.com/AwalHossain/video_streaming_client"
         },
         demoURL: { url: 'https://reely.tech' },
-        cover: { srcPath: 'projects/video-streaming/cover.png' },
+        cover: { srcPath: 'projects/video-streaming/reely.png' },
         startDate: '2023-04-25',
         endDate: '2024-01-25',
         summary: [
@@ -33,6 +33,12 @@ export const projects = {
             repo: 'video_streaming_service_server',
         },
         details: [
+            {
+                title: 'Home Page',
+                image: { srcPath: 'projects/video-streaming/cover.png' },
+                date: '2024-01-30',
+                link: { url: '#', caption: 'video list' },
+            },
             {
                 title: 'Video upload and processing',
                 image: { srcPath: 'projects/video-streaming/up.png' },
