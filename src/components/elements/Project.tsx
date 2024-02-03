@@ -77,7 +77,7 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
             link={project.server}
             startEnhancer={<FaGithub />}
         >
-            Client
+            Server
         </ButtonLink>
     ) : null;
 
