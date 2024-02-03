@@ -1,0 +1,44 @@
+---
+title: "All About JWT Token"
+
+summary: "The concept of JSON Web Tokens (JWT), a method used to verify users in web development. It covers the process of creating a JWT, how it works, and its role in securing user data and preventing unauthorized access"
+
+cover: assets/jwt.png
+
+date: 2022-08-07
+---
+
+When I first heard the jwt token name, it gave me a headache. I can still remember how terrified I was that day. I was telling myself what the hell is this new thing that I need to implement in order to verify the user and api.
+
+However, after working on a few projects, I feel forced into making this statement
+
+> Jwt token is an excellent approach to validate any user against a database.
+
+>
+
+**What is jwt token??**
+
+Jwt is an abbreviation for Json Web Token. A JWT is a mechanism to verify the owner/user. It’s encoded. When a server receives a JWT, it can guarantee the data it contains can be trusted because it’s signed by the source. No middleman can modify a JWT once it’s sent.
+
+**Creating JWT token**
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h0p7aa68qzatt0b4jp1j.png)
+
+If you take a look at the above picture closely, you will get an idea how developers generate the jwt token.
+
+When a developer creates a JWT token with a method called jwt.sign(), it contains elements such as the user id, JWT_SECRET, and expiration date. JWT_SECRET helps to make a sign token that won't work anywhere unless the secret is given. The expiration date will determine how long this token will be valid.
+After successfully generating a jwt token, All you have to do now is transmit the jwt token to the frontend and save it in localstorage or Cookie.
+.
+
+**How does JWT Token work ?**
+
+![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/c96pmydcjiy73q12cxpu.png)
+
+Let's have a look at how it works now. Let's say you need to access your data from the dashboard, but how will that website validate your identity and prevent a hacker from gaining access to your information?
+
+Simply said, the provided jwt token will be checked against the database.
+If that website discovers a user id associated with the jwt token, it will grant you access to the dashboard.
+
+So, I used the jwt.verify() function, which accepts two parameters: token and JWT SECRET, to check the jwt token. It will allow you to enter if both input values are true.
+
+Take a look at the above picture to better understand.
