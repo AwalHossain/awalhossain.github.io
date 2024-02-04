@@ -6,4 +6,4 @@ export const windowNamePrefix = brandName;
 export const windowNameSeparator = '|';
 export const twitterUser = '@awalHosssaimn';
 // Path to the image that is placed in the 'static' folder.
-export const siteImage = '/favicon.ico';
+export const siteImage = '/favicon.png';
