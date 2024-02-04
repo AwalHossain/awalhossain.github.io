@@ -7,24 +7,24 @@ type UseFluidCoverProps = {
 };
 
 export const useFluidCover = (
-    props: UseFluidCoverProps,
+  props: UseFluidCoverProps,
 ): IGatsbyImageData | undefined | null => {
-    const { imagePath } = props;
-    const allImages = useFluidCovers();
+  const { imagePath } = props;
+  const allImages = useFluidCovers();
 
-    if (!imagePath) {
-        return undefined;
-    }
+  if (!imagePath) {
+    return undefined;
+  }
 
-    const foundNode = allImages.find(
-        (node: any) => {
-            return node.relativePath === imagePath;
-        },
-    );
+  const foundNode = allImages.find(
+    (node: any) => {
+      return node.relativePath === imagePath;
+    },
+  );
 
-    if (!foundNode) {
-        return undefined;
-    }
+  if (!foundNode) {
+    return undefined;
+  }
 
-    return foundNode?.childImageSharp?.gatsbyImageData;
+  return foundNode?.childImageSharp?.gatsbyImageData;
 };

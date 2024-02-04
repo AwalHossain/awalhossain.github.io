@@ -11,23 +11,23 @@ type CardsProps = {
 };
 
 const Cards = (props: CardsProps): React.ReactElement | null => {
-    const { children, mode = cardModeGrid } = props;
+  const { children, mode = cardModeGrid } = props;
 
-    if (!children) {
-        return null;
-    }
+  if (!children) {
+    return null;
+  }
 
-    const commonClasses = 'grid gap-12 grid-cols-1';
+  const commonClasses = 'grid gap-12 grid-cols-1';
 
-    const classes = mode === cardModeGrid
-        ? `${commonClasses} sm:grid-cols-2 lg:grid-cols-3`
-        : `${commonClasses}`;
+  const classes = mode === cardModeGrid
+    ? `${commonClasses} sm:grid-cols-2 lg:grid-cols-3`
+    : `${commonClasses}`;
 
-    return (
-        <div className={classes}>
-            {children}
-        </div>
-    );
+  return (
+    <div className={classes}>
+      {children}
+    </div>
+  );
 };
 
 export default Cards;

@@ -12,21 +12,21 @@ type AboutScreenProps = {
 };
 
 const AboutScreen = (props: AboutScreenProps): React.ReactElement => {
-    const { profile } = props;
+  const { profile } = props;
 
-    const summary: string = profile.summary && profile.summary.length ? profile.summary[0] : '';
+  const summary: string = profile.summary && profile.summary.length ? profile.summary[0] : '';
 
-    return (
-        <PageLayout>
-            <SEO
-                title={`${profile.position}. ${summary}`}
-                description={`${profile.firstName} ${profile.lastName}. ${profile.position}. ${summary}`}
-            />
-            <ErrorBoundary>
-                <Profile profile={profile} />
-            </ErrorBoundary>
-        </PageLayout>
-    );
+  return (
+    <PageLayout>
+      <SEO
+        title={`${profile.position}. ${summary}`}
+        description={`${profile.firstName} ${profile.lastName}. ${profile.position}. ${summary}`}
+      />
+      <ErrorBoundary>
+        <Profile profile={profile} />
+      </ErrorBoundary>
+    </PageLayout>
+  );
 };
 
 export default AboutScreen;

@@ -1,12 +1,11 @@
-import { PageProps, graphql } from 'gatsby'
-import React from 'react'
-import BlogScreen from '../components/screens/BlogScreen'
-import { BlogPageQuery } from './__generated__/BlogPageQuery'
+import { PageProps, graphql } from 'gatsby';
+import React from 'react';
+import BlogScreen from '../components/screens/BlogScreen';
+import { BlogPageQuery } from './__generated__/BlogPageQuery';
 
 interface BlogProps extends PageProps {
     data: BlogPageQuery
 }
-
 
 export const query = graphql`
   query BlogPageQuery {
@@ -40,14 +39,12 @@ export const query = graphql`
   }
 `;
 
-
 const Blog = (props: BlogProps) => {
+  const { data } = props;
 
-    const { data } = props
+  return (
+    <BlogScreen posts={data} />
+  );
+};
 
-    return (
-        <BlogScreen posts={data} />
-    )
-}
-
-export default Blog
+export default Blog;

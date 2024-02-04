@@ -7,18 +7,18 @@ type HeaderProps = {
 };
 
 const Header = (props: HeaderProps): React.ReactElement => {
-    const { className = '' } = props;
+  const { className = '' } = props;
 
-    return (
-        <header className={`flex flex-row items-center ${className}`}>
-            <div className="mr-auto">
-                <Logo />
-            </div>
-            <nav>
-                <NavMenu />
-            </nav>
-        </header>
-    );
+  return (
+    <header className={`flex flex-row items-center ${className}`}>
+      <div className="mr-auto">
+        <Logo />
+      </div>
+      <nav>
+        <NavMenu />
+      </nav>
+    </header>
+  );
 };
 
 export default Header;

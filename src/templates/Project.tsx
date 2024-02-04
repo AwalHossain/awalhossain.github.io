@@ -11,18 +11,17 @@ interface ProjectProps extends PageProps {
 }
 
 const Project = (props: ProjectProps): React.ReactElement => {
-    const { pageContext } = props;
-    const { projectID = null } = pageContext;
+  const { pageContext } = props;
+  const { projectID = null } = pageContext;
 
-    const project: ProjectType | null = projectID && (projectID in projects)
-        // @ts-ignore
-        ? projects[projectID]
-        : null;
+  const project: ProjectType | null = projectID && (projectID in projects)
+  // @ts-ignore
+    ? projects[projectID]
+    : null;
 
-
-    return (
-        <ProjectScreen project={project} />
-    );
+  return (
+    <ProjectScreen project={project} />
+  );
 };
 
 export default Project;

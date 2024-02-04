@@ -11,24 +11,23 @@ export const cardModeRow: CardMode = 'row';
 export const cardModeColumn: CardMode = 'column';
 
 const Card = (props: CardProps): React.ReactElement | null => {
+  const { children, mode } = props;
 
-    const { children, mode } = props;
+  if (!children) {
+    return null;
+  }
 
-    if (!children) {
-        return null;
-    }
+  const commonCardStyles = 'transition duration-200 ease-in-out shadow-lg rounded-md overflow-hidden bg-gray-100 flex flex-col';
 
-    const commonCardStyles = 'transition duration-200 ease-in-out shadow-lg rounded-md overflow-hidden bg-gray-100 flex flex-col';
+  const classes = mode === cardModeRow ? `${commonCardStyles} sm:flex-row items-stretch`
+    : `${commonCardStyles}`;
 
-    const classes = mode === cardModeRow ? `${commonCardStyles} sm:flex-row items-stretch`
-        : `${commonCardStyles}`;
+  return (
+    <div className={classes}>
+      {children}
+    </div>
 
-    return (
-        <div className={classes}>
-            {children}
-        </div>
+  );
+};
 
-    )
-}
-
-export default Card
+export default Card;

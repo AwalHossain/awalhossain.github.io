@@ -7,16 +7,16 @@ type TagProps = {
 };
 
 const Tag = (props: TagProps): React.ReactElement => {
-    const { tag } = props;
+  const { tag } = props;
 
-    return (
-        <span
-            key={tag.name}
-            className="inline-block bg-gray-200 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
-        >
-            {tag.name}
-        </span>
-    );
+  return (
+    <span
+      key={tag.name}
+      className="inline-block bg-gray-200 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
+    >
+      {tag.name}
+    </span>
+  );
 };
 
 export default Tag;

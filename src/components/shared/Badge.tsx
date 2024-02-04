@@ -6,20 +6,20 @@ type BadgeProps = {
 };
 
 const Badge = (props: BadgeProps): React.ReactElement | null => {
-    const { children, className = '' } = props;
+  const { children, className = '' } = props;
 
-    if (!children) {
-        return null;
-    }
+  if (!children) {
+    return null;
+  }
 
-    const commonClassName = 'bg-gray-200 px-1 rounded text-xs';
-    const classes = `${commonClassName} ${className}`;
+  const commonClassName = 'bg-gray-200 px-1 rounded text-xs';
+  const classes = `${commonClassName} ${className}`;
 
-    return (
-        <div className={classes}>
-            {children}
-        </div>
-    );
+  return (
+    <div className={classes}>
+      {children}
+    </div>
+  );
 };
 
 export default Badge;

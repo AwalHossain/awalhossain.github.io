@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from '../../types/Link';
 import HyperLink from './HyperLink';
 
-
-
 type CardMediaMode = 'row' | 'column';
 
 export const cardMediaModeRow: CardMediaMode = 'row';
@@ -16,39 +14,36 @@ type CardMediaProps = {
     link?: Link,
 };
 
-
 const CardMedia = (props: CardMediaProps) => {
+  const {
+    children, className, mode, link
+  } = props;
 
-    const { children, className, mode, link } = props;
+  const linkClasses = link && link.url
+    ? 'cursor-pointer'
+    : '';
 
+  if (!children) {
+    return null;
+  }
 
-    const linkClasses = link && link.url
-        ? 'cursor-pointer'
-        : '';
+  const commonCardMediaStyles = `transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 h-48 bg-cover bg-gray-200 overflow-hidden block ${className} ${linkClasses}`;
 
-    if (!children) {
-        return null;
-    }
+  const classes = mode === cardMediaModeRow
+    ? `${commonCardMediaStyles} sm:h-auto sm:w-2/5 lg:w-1/4`
+    : `${commonCardMediaStyles}`;
 
-    const commonCardMediaStyles = `transition duration-200 ease-in-out transform hover:-translate-y-1 hover:scale-105 h-48 bg-cover bg-gray-200 overflow-hidden block ${className} ${linkClasses}`;
+  const wrappedChildren = link && link.url ? (
+    <HyperLink link={link} formatted={false}>
+      {children}
+    </HyperLink>
+  ) : children;
 
+  return (
+    <div className={classes}>
+      {wrappedChildren}
+    </div>
+  );
+};
 
-    const classes = mode === cardMediaModeRow
-        ? `${commonCardMediaStyles} sm:h-auto sm:w-2/5 lg:w-1/4`
-        : `${commonCardMediaStyles}`;
-
-
-    const wrappedChildren = link && link.url ? (
-        <HyperLink link={link} formatted={false}>
-            {children}
-        </HyperLink>
-    ) : children;
-
-    return (
-        <div className={classes}>
-            {wrappedChildren}
-        </div>
-    );
-}
-
-export default CardMedia
+export default CardMedia;

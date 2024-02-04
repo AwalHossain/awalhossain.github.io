@@ -6,7 +6,7 @@ export const metaFieldDescription = 'description';
 export const metaFieldSiteUrl = 'siteUrl';
 
 export const siteMetadata: SiteMetaData = {
-    [metaFieldTitle]: defaultSiteTitle,
-    [metaFieldDescription]: defaultSiteDescription,
-    [metaFieldSiteUrl]: siteURL,
+  [metaFieldTitle]: defaultSiteTitle,
+  [metaFieldDescription]: defaultSiteDescription,
+  [metaFieldSiteUrl]: siteURL,
 };

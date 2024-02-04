@@ -40,16 +40,14 @@ export const query = graphql`
   }
 `;
 
-console.log(query, "checking post template query");
-
+console.log(query, 'checking post template query');
 
 const Post = (props: BlogPostProps) => {
-    const { data, children } = props;
+  const { data, children } = props;
 
+  return (
+    <PostScreen post={data}> {children} </PostScreen>
+  );
+};
 
-    return (
-        <PostScreen post={data} > {children} </PostScreen>
-    )
-}
-
-export default Post
+export default Post;

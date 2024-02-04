@@ -7,19 +7,19 @@ type CardActionsProps = {
 };
 
 const CardActions = (props: CardActionsProps): React.ReactElement | null => {
-    const { children, className = 'px-4 pb-4' } = props;
+  const { children, className = 'px-4 pb-4' } = props;
 
-    if (!children) {
-        return null;
-    }
+  if (!children) {
+    return null;
+  }
 
-    return (
-        <div className={className}>
-            <Row className='justify-between'>
-                {children}
-            </Row>
-        </div>
-    );
+  return (
+    <div className={className}>
+      <Row className="justify-between">
+        {children}
+      </Row>
+    </div>
+  );
 };
 
 export default CardActions;

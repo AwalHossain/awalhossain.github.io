@@ -1,9 +1,9 @@
 import { useLocation } from '@gatsbyjs/reach-router';
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { siteImage, siteURL, twitterUser, windowNamePrefix, windowNameSeparator } from '../constants/siteMeta';
-
-
+import {
+  siteImage, siteURL, twitterUser, windowNamePrefix, windowNameSeparator
+} from '../constants/siteMeta';
 
 type TitleMode = 'prefix' | 'suffix';
 
@@ -31,46 +31,46 @@ type SEOProps = {
 
 // @see: https://www.gatsbyjs.com/docs/add-seo-component/
 const SEO = (props: SEOProps): React.ReactElement => {
-    const {
-        title,
-        description,
-        baseURL = siteURL,
-        twitterUsername = twitterUser,
-        titleMode = titleModePrefix,
-        image = siteImage,
-        type = ogTypeWebsite,
-    } = props;
+  const {
+    title,
+    description,
+    baseURL = siteURL,
+    twitterUsername = twitterUser,
+    titleMode = titleModePrefix,
+    image = siteImage,
+    type = ogTypeWebsite,
+  } = props;
 
-    const { pathname } = useLocation();
+  const { pathname } = useLocation();
 
-    const extendedTitle = titleMode === titleModePrefix
-        ? `${windowNamePrefix} ${windowNameSeparator} ${title}`
-        : `${title} ${windowNameSeparator} ${windowNamePrefix}`;
+  const extendedTitle = titleMode === titleModePrefix
+    ? `${windowNamePrefix} ${windowNameSeparator} ${title}`
+    : `${title} ${windowNameSeparator} ${windowNamePrefix}`;
 
-    const bannerURL = `${baseURL}${image}`;
+  const bannerURL = `${baseURL}${image}`;
 
-    const pageURL = `${baseURL}${pathname}`;
+  const pageURL = `${baseURL}${pathname}`;
 
-    // @see: https://ogp.me/
-    return (
-        <Helmet title={extendedTitle}>
-            <meta name="description" content={description} />
-            <meta name="image" content={bannerURL} />
+  // @see: https://ogp.me/
+  return (
+    <Helmet title={extendedTitle}>
+      <meta name="description" content={description} />
+      <meta name="image" content={bannerURL} />
 
-            <meta property="og:title" content={extendedTitle} />
-            <meta property="og:description" content={description} />
-            <meta property="og:url" content={pageURL} />
-            <meta property="og:image" content={bannerURL} />
-            <meta property="og:type" content={type} />
+      <meta property="og:title" content={extendedTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={pageURL} />
+      <meta property="og:image" content={bannerURL} />
+      <meta property="og:type" content={type} />
 
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:creator" content={twitterUsername} />
-            <meta name="twitter:title" content={extendedTitle} />
-            <meta name="twitter:description" content={description} />
-            <meta name="twitter:image" content={bannerURL} />
-            <meta name="twitter:url" content={pageURL} />
-        </Helmet>
-    );
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content={twitterUsername} />
+      <meta name="twitter:title" content={extendedTitle} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={bannerURL} />
+      <meta name="twitter:url" content={pageURL} />
+    </Helmet>
+  );
 };
 
 export default SEO;

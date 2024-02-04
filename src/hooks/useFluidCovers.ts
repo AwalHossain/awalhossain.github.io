@@ -1,8 +1,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 export const useFluidCovers = () => {
-    // @see: https://www.gatsbyjs.com/plugins/gatsby-plugin-image/
-    const images = useStaticQuery(graphql`
+  // @see: https://www.gatsbyjs.com/plugins/gatsby-plugin-image/
+  const images = useStaticQuery(graphql`
     query UseImagesQuery {
       allFile(
         filter: {sourceInstanceName: {eq: "images"}}
@@ -26,5 +26,5 @@ export const useFluidCovers = () => {
       }
     }
   `);
-    return images.allFile.nodes;
+  return images.allFile.nodes;
 };

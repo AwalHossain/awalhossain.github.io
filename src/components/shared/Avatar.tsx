@@ -9,13 +9,13 @@ type AvatarProps = {
 };
 
 const Avatar = (props: AvatarProps): React.ReactElement => {
-    const { avatar, className } = props;
+  const { avatar, className } = props;
 
-    return (
-        <div className={className || ''}>
-            <FluidImage image={avatar} />
-        </div>
-    );
+  return (
+    <div className={className || ''}>
+      <FluidImage image={avatar} />
+    </div>
+  );
 };
 
 export default Avatar;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { profile } from '../../data/profile';
 import SocialLinks from './socialLinks';
+
 type FooterProps = {
     className?: string,
     withFeedback?: boolean,
@@ -8,27 +9,27 @@ type FooterProps = {
 };
 
 const Footer = (props: FooterProps): React.ReactElement => {
-    const { className = '', withFeedback = false, withSupport = true } = props;
+  const { className = '', withFeedback = false, withSupport = true } = props;
 
-    return (
-        <footer className={`${className}`}>
+  return (
+    <footer className={`${className}`}>
 
-            <div
-                className="flex flex-row items-center justify-center"
-            >
-                <SocialLinks
-                    links={profile?.socialLinks}
-                    expandable={false}
-                    iconClassName="w-5 h-5"
-                    itemClassName="mr-2 ml-2"
-                />
-            </div>
+      <div
+        className="flex flex-row items-center justify-center"
+      >
+        <SocialLinks
+          links={profile?.socialLinks}
+          expandable={false}
+          iconClassName="w-5 h-5"
+          itemClassName="mr-2 ml-2"
+        />
+      </div>
 
-            <div style={{ flex: 1 }} className="hidden sm:flex">
+      <div style={{ flex: 1 }} className="hidden sm:flex">
                 &nbsp;
-            </div>
-        </footer>
-    );
-}
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

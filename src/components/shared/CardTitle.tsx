@@ -9,29 +9,29 @@ type CardTitleProps = {
 };
 
 const CardTitle = (props: CardTitleProps): React.ReactElement | null => {
-    const { children, link } = props;
+  const { children, link } = props;
 
-    if (!children) {
-        return null;
-    }
+  if (!children) {
+    return null;
+  }
 
-    const headerElement = (
-        <H level={hLevel.h3}>
-            {children}
-        </H>
-    );
+  const headerElement = (
+    <H level={hLevel.h3}>
+      {children}
+    </H>
+  );
 
-    const linkElement = link ? (
-        <HyperLink link={link}>
-            {headerElement}
-        </HyperLink>
-    ) : null;
+  const linkElement = link ? (
+    <HyperLink link={link}>
+      {headerElement}
+    </HyperLink>
+  ) : null;
 
-    return (
-        <div className="mb-3">
-            {linkElement || headerElement}
-        </div>
-    );
+  return (
+    <div className="mb-3">
+      {linkElement || headerElement}
+    </div>
+  );
 };
 
 export default CardTitle;
