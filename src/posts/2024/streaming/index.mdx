@@ -1,288 +1,126 @@
 ---
-title: "Deploying Your Project on an Ubuntu VPS with Nginx, GitHub Actions, and SSL Certification"
+title: "MERN Video Streaming- [Behind the Scene] "
 
-summary: "This article provides a comprehensive guide on setting up and deploying a project on an Ubuntu VPS using Nginx, GitHub Actions, SSL certification, and proper firewall configuration. "
+summary: " In-depth explanation of how JavaScript engines work, focusing on Google's V8 engine. It discusses the process of lexical analysis, the role of interpreters and compilers, and the concept of Just-In-Time (JIT) compilation for optimizing JavaScript execution"
 
-cover: assets/deploy.jpg
+cover: assets/reely.png
 
-date: 2024-02-03
+date: 2024-03-03
 ---
 
-**Introduction:**
-After successfully connecting to your VPS, let's perform some basic setup steps on our Ubuntu VPS. This guide will walk you through updating packages, installing Nginx, creating a user with appropriate permissions, configuring Nginx, setting up firewall rules, obtaining SSL certification, and deploying your project using GitHub Actions.
+# 🌐 Overview
 
----
+![Project Image](https://github.com/AwalHossain/video_streaming_service_server/assets/80216813/9e6b1889-c9d6-45d8-806e-27865f674912)
 
-**Updating and Upgrading Packages:**
-First, ensure your system is up to date by running:
+MERN Video Streaming is a cutting-edge, open-source platform for video streaming, offering a comprehensive, full-stack solution utilizing the latest MERN stack technologies. With MERN Video Streaming, users can easily upload, manage, and stream videos on demand, providing a seamless experience. This project features a video processing capability that provides real-time notifications upon completion.
 
-```bash
-sudo apt update
-sudo apt upgrade
-```
+The backend is comprised of three services, utilizing Redis messaging for communication. These include an API server, a video conversion service, and an HTTP server serving HLS video files. On the client side, the project uses create-react-app and MUI library, along with socket.io-client and React Context.
 
----
+# 🌟 Features
 
-**Installing Nginx:**
-Install Nginx using the following command:
+- Real-time video processing with notifications upon completion
+- Three-tier backend services for API, video conversion, and HTTP serving
+- Frontend built with create-react-app and MUI library
+- Real-time communication with the API server using socket.io-client and React Context
 
-```bash
-sudo apt install nginx
-```
+# 🏗️ Architecture
 
----
+![Architecture Image](https://user-images.githubusercontent.com/497812/220627727-04a26928-71df-4c9b-9637-92289a2beee2.png)
 
-**Creating a User and Setting Permissions:**
-Create a new user and grant it sudo permissions:
+# 📡 Backend Services
 
-```bash
-sudo adduser [your_user_name]
-sudo usermod -aG sudo [your_user_name]
-```
+### 🖥️ API Server
 
-Grant permissions for the user to create folders and write files:
+The API server is an Expressjs app that uses Joi, Multer, BullMQ, Socket.io, and
+MongoDB driver. The server communicates with Redis to process and store data,
+and uses MongoDB as the primary database. The API server is responsible for the
+following:
 
-```bash
-sudo chmod -R 777 [your_directory_path]
-```
+1. **User Authentication:** Handles user registration, login, and JWT token generation.
+2. **Video Upload:** Manages video uploads, stores video metadata in MongoDB, and sends a job to the video processing service.
+3. **Video Management:** Provides endpoints for fetching video metadata, deleting videos, and fetching video streams.
+4. **Real-time Notifications:** Sends real-time notifications to the client using socket.io upon video processing completion.
+5. **Job Queue Management:** Manages the job queue using BullMQ, passing one job to the next upon completion.
+6. **Redis Communication:** Communicates with Redis to store job data and send real-time notifications to the client.
+7. **Bucket Storage Integration:** Upload completed video file into a CDN bucket storage to store video files, ensuring optimal streaming quality.
+8. **Video Streaming:** Serves HLS video files to the client, allowing users to stream videos seamlessly.
 
-for me it's [your_directory_path] is /var/www,
-this sudo chmod -R 777 is the command to provide permission to write or create folder as user,
-inside square bracket you need to put directory path,after that you have to switch to that user
+The HTTP server communicates with Redis to fetch video metadata and stream video files.
+This server is not exposed to the public internet, ensuring a secure video streaming pipeline.
 
----
+### 🎞️ Video Processing Service
 
-**Creating Project Directory and Switching Users:**
-Switch to the newly created user and set up your project directory:
-Here you will have to create a folder where you will do your necessary work, for me i'll work as name streaming,
-you need to navigate to your directory where you want to create folder, for me it's /var/www,
-and this directory only available after nginx install.
+The Video Conversion Service is a Node.js process with ffmpeg responsible for converting videos and managing tasks with the BullMQ library.
+First of all, when user upload a video with an watermark image(optional), the API server sends a job to the video processing service. The job contains the video file, the watermark image, and the user ID. The video processing service then processes the video in three steps:
 
-```bash
-su - [your_user_name]
-cd /var/www
-mkdir streaming
-cd streaming
-```
+1. **Video Conversion:** Converts any format video into MP4 and applies a watermark if an image is provided.
 
----
+![video-conversion](./assets/up.png)
 
-**Configuring GitHub Actions:**
-Create a GitHub repository and configure GitHub Actions to deploy your project automatically.
-i've already created a repository name streaming. go to your repository setting and find action,
-you will see a option call runner, click that and you will see a option call add runner, click that and after that click self-hosted runner,
-here you will see differen os option, choose linux and follow the instruction.
+2. **Adaptive Bitrate Processing:** Transforms the video into adaptive bitrate HLS format (480p & 1080p) for optimal streaming quality.
+3. **CDN Upload:** Upon successful conversion, the video is uploaded to a CDN bucket storage. This allows users to stream videos seamlessly from anywhere in the world.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6dv4bfrnb9vcvxl8p7ed.png)
+The video processing service communicates with the API server using Redis messaging to send real-time notifications upon completion.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bvtmvzmkw044kjqwrrgz.png)
+# 📱 Frontend
 
-At very last step you need to install some packgae to make your runner active all the time.
-if you run ./run.sh, it will stay active for momentary but
-if exit it will be in offline. Sohere we have install a packgae to make it active all the time
+## 📥 Upload
 
-```bash
-sudo ./svc.sh install
-```
+To upload a video with watermark image, the user must first register and login. After logging in, the user can upload a video with an optional watermark image.
+The video is then processed and uploaded to the CDN bucket storage. Upon completion every process, the user receives a real-time notification.
 
-after that run it
+![home-page](./assets/cover.png)
 
-```bash
-sudo ./svc.sh start
-```
+Below some feature of the frontend part of the project:
 
----
+- **Video Search:** Look for videos by typing in their title.
+- **Video Filter:** Pick videos based on specific tags.
+- **Video Sorting:** Put videos in order by date, views, likes, etc.
+- **Edit Video metadata:** User can edit the video title, description, tag etc.
+- **Video Tag:** Add tags to group your videos together.
 
-It will be active all the time, and you can see it in your repository setting, runner option.
+## 📽️ Streaming
 
-## Environment(.env) Setup
+User will able to see their uploaded videos and stream them. The video player is built with HLS.js, allowing for seamless video streaming.
+This player has a built-in adaptive bitrate feature, ensuring optimal streaming quality. User can easily switch to different video quality options.
+Depend on user internet speed, the video player will automatically switch to the best quality.
 
-It's important step to add environment variable in your project before deploying it automatically,
-you can add environment variable in your repository setting, go to your repository setting and find secret,
+![video-player](./assets/pl.png)
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/aedhpnfjmdqtwqv2wr59.png)
+On the right side of the video player, user can see the related videos.
+Below the video player, user can see the video details.
 
-![Image description](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/f0puwmb9j6swtrf2m0rx.png)
+## 🚀** Upcoming Update **
 
-**Installing Node.js and PM2:**
-Install Node.js LTS version and PM2 for running your project in the background:
+Oviously This project isn't done yet, there are lot other features that can be added to this project. Here are some of the features that I'm planning to add in the future:
 
-```bash
-curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-sudo apt-get install -y nodejs
-npm install -g pm2@latest
-```
+- **User Profile:** User can see their profile and update their profile.
+- **Video Analytics:** User can see the video analytics like views, likes, comments etc.
+- **Video Comment:** User can comment on the video.
+- **Video Like:** User can like the video.
+- **Video Share:** User can share the video.
+- **Video Playlist:** User can create playlist and add video to the playlist.
+- **Video Subscription:** User can subscribe to the channel and get notification when the channel upload a new video.
+- **Video Notification:** User can get notification when someone like, comment, share their video.
+- **Video Embed:** User can embed the video to their website.
+- **Video Download:** User can download the video.
+- **Video Edit:** User can edit the video title, description, tag etc.
+- **Video Delete:** User can delete the video.
 
-> You may encounter an error while downloading this package as a user.
-> To avoid this, you can switch to the root user by running the `exit` command,
-> then proceed with the installation. After that, we'll configure Nginx.
-> You can perform these steps as a root user or as a regular user.
-> For this guide, I'll be executing these steps as a root user.
-> To switch to the root user, use the command `cd /root`.
+## 🤖 Technologies Used
 
-```bash
-node -v
-npm -v
-```
+- **Backend:** TypeScript, Node.js, Express.js,ffmpeg, MongoDB, Redis, BullMQ, Socket.io, AWS S3, ffmpeg, HLS.js
+- **Frontend:** React, MUI, HLS.js, socket.io-client, React Context
 
----
+## 👨🏻‍💻 Github
 
-**Configuring Nginx:**
-Edit the default Nginx configuration file to proxy requests to your application:
+<a
+  href="https://github.com/AwalHossain/video_streaming_service_server"
+  target="_blank"
+>
+  Video Streaming Service Server
+</a>
 
-```bash
-sudo nano /etc/nginx/sites-available/default
-```
-
-you'll see default file now let's edit this default file
-Add the following configuration:
-
-```nginx
- location / {
-            proxy_pass http://localhost:5000;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection 'upgrade';
-            proxy_set_header Host $host;
-            proxy_cache_bypass $http_upgrade;
-        }
-```
-
-**proxy_pass http://localhost:5000 **: This command tells Nginx to forward requests it receives to http://localhost:5000, which is the address of the application you're running. Replace 5000 with the port number your application is running on.
-
-**proxy_http_version 1.1**: This command sets the version of the HTTP protocol that will be used for the proxy request. In this case, it's HTTP/1.1.
-
-**proxy_set_header Upgrade $http_upgrade**: This command sets the Upgrade HTTP header to the value of the $http_upgrade variable. This is used for handling WebSocket connections.
-
-**proxy_set_header Connection 'upgrade'**: This command sets the Connection HTTP header to the value 'upgrade'. This is also used for handling WebSocket connections.
-
-**proxy_set_header Host $host**: This command sets the Host HTTP header to the value of the $host variable. This is used to pass the original host header to the proxied server.
-
-**proxy_cache_bypass $http_upgrade**: This command tells Nginx to bypass the cache when the $http_upgrade variable is set. This is useful for WebSocket connections, which should not be cached.
-
-**N.B:** You can replaced localhost:5000 with your port number
-
-Then, restart Nginx:
-
-```bash
-sudo systemctl restart nginx
-```
-
----
-
-**Firewall Configuration:**
-Configure the firewall using UFW:
-
-```bash
-sudo ufw allow OpenSSH
-sudo ufw allow 'Nginx Full'
-sudo ufw enable
-```
-
-## Domain Setting
-
-If you have custom domain and you want to use that domain for your project,
-you need to add your domain name in the default file, you can find this file in /etc/nginx/sites-available/default, open this file and
-add your domain name as server_name and save it.
-
-```bash
-     server_name api.reely.tech;
-
-        location / {
-            proxy_pass http://localhost:5000;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection 'upgrade';
-            proxy_set_header Host $host;
-            proxy_cache_bypass $http_upgrade;
-        }
-```
-
----
-
-**SSL Certification:**
-First Make sure that Nginx Full rule is available
-
-```
-ufw status
-```
-
-Install SSL certification using Let's Encrypt:
-
-```bash
-sudo apt install certbot python3-certbot-nginx
-sudo certbot --nginx -d example.com -d www.example.com
-```
-
----
-
-**Adjusting Nginx Configuration for File Upload:**
-Edit the Nginx configuration file to allow larger file uploads:
-
-```bash
-sudo nano /etc/nginx/nginx.conf
-```
-
-Add the following line inside the `http` block:
-
-```nginx
-client_max_body_size 100M;
-```
-
-Reload Nginx:
-
-```bash
-sudo systemctl reload nginx
-```
-
----
-
-**GitHub Actions Deployment:**
-Set up GitHub Actions by creating a `.github/workflows/main.yml` file in your repository with the provided configuration.
-
-## Github Actions
-
-Now we are going to use github actions to deploy our project automatically. so let's go to our github repository and create a folder name .github and inside that folder create a folder name workflows and inside that folder create a file name main.yml. so the path will be .github/workflows/main.yml. now let's copy and paste this code in main.yml file
-
-```bash
-name: Node.js CI
-
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
-jobs:
-        build:
-        runs-on: self-hosted
-        strategy:
-        matrix:
-                node-version: [14.x]
-        steps:
-        - uses: actions/checkout@v2
-        - name: Use Node.js ${{ matrix.node-version }}
-                uses: actions/setup-node@v1
-                with:
-                node-version: ${{ matrix.node-version }}
-        - name: npm install, build, and test
-                run: |
-                npm install
-                npm run build --if-present
-                npm run test --if-present
-        - name: Deploy to VPS
-                pm2 start npm --name "streaming" -- start
-
-```
-
-configure githbu actions according to your need. This one is for very important cause
-it will deploy your project automatically after push to master branch. so don't forget to configure it according to your need.,
-
----
-
-**Conclusion:**
-By following these steps, you can set up and deploy your project on an Ubuntu VPS with Nginx, GitHub Actions, SSL certification, and proper firewall configuration. This comprehensive guide ensures a smooth deployment process for your web application.
-
----
-
-**Keywords:** Ubuntu VPS, Nginx, GitHub Actions, SSL Certification, Firewall Configuration, Node.js, PM2, Deployment, Let's Encrypt, File Upload, Configuration, GitHub Repository.
+<a href="https://github.com/AwalHossain/video_streaming_client" target="_blank">
+  Video Streaming Service Client
+</a>
