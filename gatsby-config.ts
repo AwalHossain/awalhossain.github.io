@@ -1,15 +1,5 @@
 import { GatsbyConfig } from 'gatsby';
-import {
-  siteMetadata
-} from './src/data/siteMetadata';
-
 const gatsbyConfig: GatsbyConfig = {
-  siteMetadata,
-
-  flags: {
-    // Use DEV_SSR to debug the SSR related issues locally (i.e. hydration related ones).
-    DEV_SSR: false,
-  },
 
   plugins: [
     // @see: https://www.gatsbyjs.com/plugins/gatsby-plugin-postcss/
