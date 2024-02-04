@@ -1,23 +1,25 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image';
-// import { UseImagesQuery } from './generated/UseImagesQuery';
+import {
+  UseImagesQuery_allFile_nodes,
+} from './__generated__/useImagesQuery';
 import { useFluidCovers } from './useFluidCovers';
 
 type UseFluidCoverProps = {
-    imagePath?: string | null | undefined,
+  imagePath?: string | null | undefined,
 };
 
 export const useFluidCover = (
   props: UseFluidCoverProps,
 ): IGatsbyImageData | undefined | null => {
   const { imagePath } = props;
-  const allImages = useFluidCovers();
+  const allImages: UseImagesQuery_allFile_nodes[] = useFluidCovers();
 
   if (!imagePath) {
     return undefined;
   }
 
-  const foundNode = allImages.find(
-    (node: any) => {
+  const foundNode: UseImagesQuery_allFile_nodes | undefined = allImages.find(
+    (node: UseImagesQuery_allFile_nodes) => {
       return node.relativePath === imagePath;
     },
   );
