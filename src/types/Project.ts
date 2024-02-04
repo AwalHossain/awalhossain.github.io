@@ -1,4 +1,3 @@
-
 import { DateString } from './Date';
 import { Details } from './Details';
 import { Image } from './Image';
