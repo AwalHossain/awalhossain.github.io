@@ -1,49 +1,60 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal TypeScript Starter
-</h1>
+# awalhossain.tech
 
-## 🚀 Quick start
+![CI](https://github.com/awalHossain/awalhossain.github.io/workflows/CI/badge.svg)
 
-1.  **Create a Gatsby site.**
+My personal [website](https://awalhossain.tech) with a list of my projects that help people learn and blog posts about life, web-development, and machine-learning.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal TypeScript starter.
+![awalhossain tech](https://github.com/trekhleb/trekhleb.github.io/assets/80216813/ed1f93f2-7653-4282-8f1f-61a931ef582f)
 
-    ```shell
-    # create a new Gatsby site using the minimal TypeScript starter
-    npm init gatsby -- -ts
-    ```
+## Development
 
-2.  **Start developing.**
+The website is built on [Gatsby](https://www.gatsbyjs.com/). See the [Gatsby cheat-sheet](https://www.gatsbyjs.com/gatsby-cheat-sheet.pdf) for development hints.
 
-    Navigate into your new site’s directory and start it up.
+### Running the project locally
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+Install proper version of Node:
 
-3.  **Open the code and start customizing!**
+```bash
+nvm use
+```
 
-    Your site is now running at http://localhost:8000!
+Install dependencies:
 
-    Edit `src/pages/index.tsx` to see your site update in real-time!
+```bash
+npm i
+```
 
-4.  **Learn more**
+To run the project locally in development mode on [http://localhost:8000](http://localhost:8000):
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+```bash
+npm run develop
+```
 
-## 🚀 Quick start (Netlify)
+View GraphiQL, an in-browser IDE, to explore your site's data and schema on [http://localhost:8000/\_\_\_graphql](https://localhost:8000/___graphql)
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+To build the production version of the project:
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal-ts)
+```bash
+npm run build
+```
+
+Serve the production build for testing on [http://localhost:9000](http://localhost:9000):
+
+```bash
+npm run serve
+```
+
+To do ESLint and Type checking:
+
+```bash
+npm run lint
+npm run type
+```
+
+### Working with icons
+
+Use [react-icons.github.io](https://react-icons.github.io/react-icons) to search for available icons.
+
+### Styling components
+
+Use [tailwindcss.com](https://tailwindcss.com) to search for available CSS classes.
