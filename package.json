@@ -14,7 +14,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "typecheck": "tsc --noEmit"
+    "type": "tsc --noEmit",
+    "deploy": "gh-pages --dist ./public --branch public"
   },
   "dependencies": {
     "@gatsbyjs/reach-router": "^2.0.1",
