@@ -43,6 +43,9 @@ jobs:
       - name: Run type checking
         run: npm run type
 
+      - name: Build
+        run: npm run build
+
   deploy:
     runs-on: ubuntu-latest
     needs: test
