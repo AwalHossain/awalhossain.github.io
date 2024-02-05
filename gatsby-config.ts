@@ -1,5 +1,4 @@
 import { GatsbyConfig } from 'gatsby';
-import { defaultSiteTitle } from './src/components/constants/siteMeta';
 const gatsbyConfig: GatsbyConfig = {
   flags: {
     // Use DEV_SSR to debug the SSR related issues locally (i.e. hydration related ones).
@@ -106,7 +105,7 @@ const gatsbyConfig: GatsbyConfig = {
           {
             resolve: 'gatsby-plugin-cname',
             options: {
-              cname: defaultSiteTitle,
+              cname: 'awalhossain.tech',
             }
           },
 
