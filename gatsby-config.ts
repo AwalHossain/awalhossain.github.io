@@ -102,12 +102,6 @@ const gatsbyConfig: GatsbyConfig = {
               },
             },
           },
-          {
-            resolve: 'gatsby-plugin-cname',
-            options: {
-              cname: 'awalhossain.tech',
-            }
-          },
 
           // @see: https://www.gatsbyjs.com/plugins/gatsby-remark-copy-linked-files/?=gatsby-remark-copy-linked-files
           {
