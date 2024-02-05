@@ -15,7 +15,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "type": "tsc --noEmit",
-    "deploy": "gh-pages --dist ./public --branch public"
+    "add-domain": "echo 'awalhossain.tech' > ./public/CNAME",
+    "deploy": "npm run add-domain && gh-pages --dist ./public --branch public"
   },
   "dependencies": {
     "@gatsbyjs/reach-router": "^2.0.1",
