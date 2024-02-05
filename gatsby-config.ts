@@ -1,4 +1,5 @@
 import { GatsbyConfig } from 'gatsby';
+import { defaultSiteTitle } from './src/components/constants/siteMeta';
 const gatsbyConfig: GatsbyConfig = {
   flags: {
     // Use DEV_SSR to debug the SSR related issues locally (i.e. hydration related ones).
@@ -101,6 +102,12 @@ const gatsbyConfig: GatsbyConfig = {
                 '.json': 'json',
               },
             },
+          },
+          {
+            resolve: 'gatsby-plugin-cname',
+            options: {
+              cname: defaultSiteTitle,
+            }
           },
 
           // @see: https://www.gatsbyjs.com/plugins/gatsby-remark-copy-linked-files/?=gatsby-remark-copy-linked-files
