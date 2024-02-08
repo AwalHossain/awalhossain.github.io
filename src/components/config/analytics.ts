@@ -1,0 +1,1 @@
+export const GOOGLE_ANALYTICS_ID = "G-F61ZBFTC7B"
