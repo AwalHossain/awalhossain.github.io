@@ -1,4 +1,6 @@
 import { GatsbyConfig } from 'gatsby';
+import { GOOGLE_ANALYTICS_ID } from './src/components/config/analytics';
+
 const gatsbyConfig: GatsbyConfig = {
   flags: {
     // Use DEV_SSR to debug the SSR related issues locally (i.e. hydration related ones).
@@ -33,6 +35,16 @@ const gatsbyConfig: GatsbyConfig = {
       options: {
         name: 'posts',
         path: `${__dirname}/src/posts`,
+      },
+    },
+    // @see: https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/
+    {
+      resolve: 'gatsby-plugin-google-gtag',
+      options: {
+        // You can add multiple tracking ids and a page-view event will be fired for all of them.
+        trackingIds: [
+          GOOGLE_ANALYTICS_ID,
+        ],
       },
     },
 
