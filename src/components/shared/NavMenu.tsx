@@ -26,9 +26,9 @@ const NavMenu = (): React.ReactElement => {
   return (
     <ul className="flex flex-row">
       {links}
-      <li className="ml-5">
+      <li className="ml-5 sm:flex hidden">
         <HyperLink
-          className="uppercase text-sm font-semibold border-2 border-solid border-black px-2 rounded "
+          className="uppercase text-sm font-semibold border-2 border-solid border-black px-2 rounded"
           link={{ url: 'https://drive.google.com/file/d/1kylDDOuym_Ky1Fu_39PrVRm-aeMGefvR/view?usp=sharing' }}
           hoverClassName="hover:bg-black hover:text-white"
         >
