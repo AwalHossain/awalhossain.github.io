@@ -1,7 +1,22 @@
 .view-project-first {
     background: linear-gradient(to right, #66c4f0, #4d78e9);
+    transition: color .15s ease-in-out,
+            background-color .15s ease-in-out,
+            border-color .15s ease-in-out,
+            box-shadow .15s ease-in-out;
 }
 
  .view-project-first:hover {
+    opacity: 80%;
+}
+
+
+.outer {
+    border: 1px solid #ef4b6c;
+    margin: 0 auto;
+
+}
+
+.outer:hover {
     opacity: 80%;
 }
