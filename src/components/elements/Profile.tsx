@@ -1,6 +1,7 @@
 import { FiBriefcase } from '@react-icons/all-files/fi/FiBriefcase';
 import React from 'react';
 import type { Profile as ProfileType } from '../../types/Profile';
+import LatestProject from '../home/LatestProject';
 import Avatar from '../shared/Avatar';
 import Greeting from '../shared/Greetings';
 import H, { hLevel } from '../shared/H';
@@ -9,7 +10,7 @@ import Tags from '../shared/Tags';
 import SocialLinks from '../shared/socialLinks';
 
 type ProfilProps = {
-    profile: ProfileType
+  profile: ProfileType
 }
 
 const Profile = (props: ProfilProps): React.ReactElement => {
@@ -87,6 +88,7 @@ const Profile = (props: ProfilProps): React.ReactElement => {
       <div>
         <Greeting />
         {/* <TechStacks /> */}
+        <LatestProject />
       </div>
     </div>
   );
