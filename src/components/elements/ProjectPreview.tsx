@@ -19,7 +19,7 @@ import Row from '../shared/Row';
 import Tags from '../shared/Tags';
 
 type ProjectPreviewProps = {
-    project: ProjectType | null,
+  project: ProjectType | null,
 };
 
 const tagsPerProject = 3;
@@ -128,8 +128,8 @@ const ProjectPreview = (props: ProjectPreviewProps): React.ReactElement | null =
     : null;
 
   const achievementsLink = withAchievements
-        && project?.details
-        && project.details.length
+    && project?.details
+    && project.details.length
     ? (
       <Row className="mt-3">
         <HyperLink
