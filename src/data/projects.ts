@@ -58,7 +58,7 @@ export const projects = {
       url: 'https://github.com/AwalHossain/Bookish'
     },
     demoURL: { url: 'https://bookishly.netlify.app/' },
-    cover: { srcPath: 'projects/bookish/cover.png' },
+    cover: { srcPath: 'projects/bookish/book.png' },
     startDate: '2023-09-18',
     endDate: '2023-09-27',
     summary: [
@@ -105,7 +105,7 @@ export const projects = {
       url: 'https://github.com/AwalHossain/Dev-Blog'
     },
     demoURL: { url: 'https://bookishly.netlify.app/' },
-    cover: { srcPath: 'projects/devblog/cover.png' },
+    cover: { srcPath: 'projects/devblog/blog.png' },
     startDate: '2023-06-25',
     endDate: '2023-07-12',
     summary: [
