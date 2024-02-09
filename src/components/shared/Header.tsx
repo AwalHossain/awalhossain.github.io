@@ -3,7 +3,7 @@ import Logo from './Logo';
 import NavMenu from './NavMenu';
 
 type HeaderProps = {
-    className?: string,
+  className?: string,
 };
 
 const Header = (props: HeaderProps): React.ReactElement => {
