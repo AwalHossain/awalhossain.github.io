@@ -45,6 +45,11 @@ const gatsbyConfig: GatsbyConfig = {
         trackingIds: [
           GOOGLE_ANALYTICS_ID,
         ],
+        pluginConfig: {
+          head: true,
+        },
+        exclude: ['/preview/**', '/do-not-track/me/too/'],
+        cookieDomain: "auto",
       },
     },
 
