@@ -11,9 +11,12 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: [
-          'Roboto',
+          "Playfair Display",
+          'sans-serif',
           ...defaultTheme.fontFamily.sans,
         ],
+        'custom': ['"Playfair Display"', 'serif'],
+        'custom2': ['"Montserrat', 'sans-serif'],
       },
       borderRadius: {
         'custom': '50% 50% 50% 50% / 5% 5% 5% 5%',
