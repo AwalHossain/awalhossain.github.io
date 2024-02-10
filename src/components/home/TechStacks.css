@@ -1,5 +1,5 @@
 .clients {
-    background-color: #f6f8fc;
+    /* background-color: #f6f8fc; */
     margin-bottom: 8rem;
     padding: 1rem 0;
 }
@@ -12,14 +12,13 @@
 }
 
 .client-item {
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: #d9dde6;
     border: 1px solid transparent;
     height: 110px;
     border-radius: 16px;
-    width: 180px;
+    width: 110px;
     margin: 0.7rem;
 }
 
@@ -39,7 +38,7 @@
     justify-content: center;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .content-group {
         flex-direction: column;
     }
@@ -53,44 +52,38 @@
         margin: 1rem auto;
     }
 
-    .hoopsai {
-        width: 60%;
+    .one {
+        width: 15%;
         height: 70px;
     }
 
-    .agoda {
-        width: 80%;
+    .two {
+        width: 20%;
         height: 85px;
     }
 
-    .getsafe {
-        display: none;
+    .three {
+        width: 40%;
+        height: 90px;
     }
 
-    .grab {
-        width: 100%;
+
+    .four {
+        width: 50%;
         height: 100px;
     }
-
-    .crisp {
-        display: none;
+    .five {
+        width: 40%;
+        height: 90px;
     }
 
-    .anyleads {
-        display: none;
-    }
 
-    .teachable {
-        width: 80%;
+    .six {
+        width: 20%;
         height: 85px;
     }
-
-    .flyr {
-        display: none;
-    }
-
-    .roger {
-        width: 60%;
+    .seven {
+        width: 15%;
         height: 70px;
     }
 }
