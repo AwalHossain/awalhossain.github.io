@@ -6,6 +6,10 @@
             box-shadow .15s ease-in-out;
 }
 
+.latest{
+    background-color: #d9dde6;
+}
+
  .view-project-first:hover {
     opacity: 80%;
 }
