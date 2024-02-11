@@ -43,47 +43,50 @@
         flex-direction: column;
     }
 
-    .content-card {
-        margin: 0 0.5rem;
-    }
-
     .client-item {
         width: 100%;
-        margin: 1rem auto;
+        margin: 0.5rem auto;
     }
 
     .one {
         width: 15%;
         height: 70px;
+        min-width: 70px; 
     }
 
     .two {
         width: 20%;
-        height: 85px;
+        height: 70px;
+        min-width: 90px; 
     }
 
     .three {
         width: 40%;
-        height: 90px;
+        height: 75px;
+        min-width: 120px; 
     }
 
 
     .four {
-        width: 50%;
-        height: 100px;
+        width: 65%;
+        height: 90px;
+        min-width: 130px; 
     }
     .five {
         width: 40%;
-        height: 90px;
+        height: 75px;
+        min-width: 120px; 
     }
 
 
     .six {
         width: 20%;
-        height: 85px;
+        height: 70px;
+        min-width: 90px; 
     }
     .seven {
         width: 15%;
         height: 70px;
+        min-width: 70px; 
     }
 }
