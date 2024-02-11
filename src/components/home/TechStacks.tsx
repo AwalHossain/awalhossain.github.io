@@ -16,6 +16,7 @@ import redux from '../../images/tech/redux.svg';
 import tailwind from '../../images/tech/tailwind.svg';
 import typescript from '../../images/tech/typescript.svg';
 import './TechStacks.css';
+import H, { hLevel } from '../shared/H';
 
 const clients = [
   { name: 'hoopsai', image: '../docs/hoopsai.png' },
@@ -35,8 +36,11 @@ const TechStacks = () => (
   <section className="clients my-20 py-4">
     <div className=" m-auto overflow-hidden">
       <div className=" text-center mb-20 relative">
-        <h1 className="font-serif text-black text-5xl font-normal pb-5">Skills</h1>
-        <p className="font-serif text-black text-2xl mb-4">I’ve been working with the skills.</p>
+        {/* <h1 className=" text-black text-5xl font-semibold pb-5">Skills</h1> */}
+        <H level={hLevel.h1} className="mb-1 font-extrabold tracking-tight">
+        Skills
+      </H>
+        <p className=" text-black text-2xl mb-4">I’ve been working with the skills.</p>
         <div className="absolute w-10 h-0.5 bg-red-500 left-1/2 transform -translate-x-1/2" />
       </div>
       <div className="content-group flex flex-col lg:flex-row justify-center">
