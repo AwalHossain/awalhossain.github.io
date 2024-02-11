@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Project as ProjectType, Projects as ProjectsType } from '../../types/Project';
+import { Project as ProjectType, Projects, Projects as ProjectsType } from '../../types/Project';
 import { projectMapToArray } from '../../utils/projects';
 import { getStringSearchParam, setSearchParam } from '../../utils/url';
 import ProjectFilters, {
@@ -13,7 +13,7 @@ import Row from '../shared/Row';
 import SEO from '../shared/SEO';
 
 type ProjectsScreenProps = {
-    projects: ProjectsType
+    projects: ProjectsType,
 }
 
 type ProjectSorter = {
