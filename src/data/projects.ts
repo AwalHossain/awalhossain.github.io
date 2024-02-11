@@ -49,6 +49,16 @@ export const projects = {
         link: { url: 'https://www.producthunt.com/posts/js-image-carver', caption: 'Product page' },
       },
     ],
+    featured:{
+      isFeatured: true,
+      priority: 1,
+      title : 'Reely MERN Video Streaming App',
+      cover: { srcPath: 'projects/video-streaming/reely.png' },
+      summary: [
+        'MERN Video Streaming is a cutting-edge, open-source platform for video streaming',
+      ],
+      id: 'Reely-A-MERN-Video-Streaming-App',
+    }
   },
   'Bookish-A-Book-Management-Site': {
     id: 'Bookish-A-Book-Management-Site',
@@ -96,6 +106,16 @@ export const projects = {
         link: { url: '', caption: '' },
       },
     ],
+    featured:{
+      isFeatured: true,
+      priority: 2,
+      title : 'Bookish- A Book Management Site',
+      cover: { srcPath: 'projects/bookish/book.png' },
+      summary: [
+        'Bookish is a web application that allows users to discover, review, and manage books',
+      ],
+      id: 'Bookish-A-Book-Management-Site',
+    }
   },
   'DevBlog-a-developer-blog-site': {
     id: 'DevBlog-a-developer-blog-site',
@@ -143,6 +163,16 @@ export const projects = {
         link: { url: '', caption: '' },
       },
     ],
+    featured:{
+      isFeatured: true,
+      priority: 4,
+      title : 'DevBlog: Developer Community Blog Site',
+      cover: { srcPath: 'projects/devblog/blog.png' },
+      summary: [
+        'Dev-Blog is a user-friendly blog site featuring several blogs on various topics related to development',
+      ],
+      id: 'DevBlog-a-developer-blog-site',
+    }
   },
   'pc-builder': {
     id: 'pc-builder',
@@ -188,6 +218,16 @@ export const projects = {
         link: { url: '#', caption: 'PC Builder page' },
       },
     ],
+    featured:{
+      isFeatured: true,
+      priority: 3,
+      title : 'PC Builder',
+      cover: { srcPath: 'projects/pcBuilder/cover.png' },
+      summary: [
+        'Discover and customize your dream PC with our intuitive builder, featuring organized component categories',
+      ],
+      id: 'pc-builder',
+    }
   },
   'health-coach': {
     id: 'health-coach',
@@ -233,5 +273,15 @@ export const projects = {
         link: { url: '#', caption: 'Specialist' },
       },
     ],
+    featured:{
+      isFeatured: true,
+      priority: 6,
+      title : 'Health-Coach',
+      cover: { srcPath: 'projects/health/cover.png' },
+      summary: [
+        'Healthcoach is your all-in-one platform for achieving holistic wellness, offering personalized coaching, diverse health options, and expert guidance.',
+      ],
+      id: 'health-coach',
+    }
   },
 };
