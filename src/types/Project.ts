@@ -1,5 +1,6 @@
 import { DateString } from './Date';
 import { Details } from './Details';
+import { Featured } from './Featured';
 import { Image } from './Image';
 import { Link } from './Link';
 import { Tag } from './Tag';
@@ -23,6 +24,7 @@ export type Project = {
     server?: Link,
     links?: Link[],
     details?: Details[],
+    featured: Featured,
 };
 
 export type Projects = Record<ProjectID, Project>;
