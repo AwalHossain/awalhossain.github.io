@@ -2,6 +2,7 @@ import React from 'react';
 import type { Link } from '../../types/Link';
 import { routes } from '../constants/routes';
 import HyperLink from './HyperLink';
+import ContactButton from '../home/ContactButton';
 
 const Greeting = (): React.ReactElement => {
   const projectsLink: Link = {
@@ -25,6 +26,7 @@ const Greeting = (): React.ReactElement => {
   );
 
   return (
+    <div className='relative'>
     <p className="font-light">
       Hi there!
       I&apos;m Awal Hossain, a seasoned Full Stack Web Developer with in-depth Proficiency in crafting exceptional web solutions.
@@ -34,6 +36,7 @@ const Greeting = (): React.ReactElement => {
       I also write {blogLinkElement} about life, web-development
       and machine learning.
     </p>
+    </div>
   );
 };
 
