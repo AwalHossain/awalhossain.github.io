@@ -83,19 +83,19 @@ const handleSubmit = async (event: React.FormEvent) => {
           <div onClick={stopPropagation} className={`relative rounded-custom border inline-block align-bottom bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl sm:w-full overflow-y-auto ${isAnimating ? 'animate-slide-down' : ''}`}
   style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
 >
-              <img src={contact} alt="Contact" className="absolute top-0 left-0 h-24 w-28 md:h-52 md:w-48 lg:h-64 lg:w-64" />
+              <img src={contact} alt="Contact" className="absolute top-0 left-0 h-44 w-52 lg:h-64 lg:w-64" />
               <button onClick={closeModal} className="absolute right-10 top-10 m-2 text-gray-600 hover:text-gray-900 z-50">
                 X
               </button>
               <div className=" flex items-center justify-center h-auto bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div className="">
 
-                  <div className="my-10 z-50">
-                  <h3 className="text-3xl leading-6 font-bold text-gray-900 font-custom">
+                  <div className="my-20 mx-5 z-50">
+                  <h3 className="text-3xl leading-6 font-bold text-gray-900 ">
                     Let's Talk
                   </h3>
                     <p className="text-sm mb-3">
-                    Interested in my work? Send me a message and I'll get back to you as soon as possible.
+                     Interested in my work? Send me a message and I'll get back to you as soon as possible.
                     </p>
                     {
                       submissionStatus ? (
