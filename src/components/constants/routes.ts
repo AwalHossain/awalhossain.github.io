@@ -1,11 +1,9 @@
-type Slug =
-    | 'home'
-    | 'projects'
-    | 'blog';
+type Slug = 'home' | 'projects' | 'blog' | 'contact';
 
 export type Route = {
     path: string,
     name: string,
+    isModal?: boolean,
 };
 
 type Routes = Record<Slug, Route>;
@@ -22,5 +20,10 @@ export const routes: Routes = {
   blog: {
     path: '/blog',
     name: 'Blog',
+  },
+  contact: {
+    path: '/contact',
+    name: 'Contact',
+    isModal: true,
   },
 };
