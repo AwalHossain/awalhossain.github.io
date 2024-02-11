@@ -1,0 +1,32 @@
+.hero-button-float{
+    position: relative;
+}
+.button-wrapper{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: transform 0.5s ease-out;
+}
+.hero-button-float .btn {
+    position: absolute;
+    bottom: 30%; /* initial position in the middle of the viewport */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: transform 0.5s ease-out; /* animate the transform property */
+}
+
+.scrolled {
+    position: fixed;
+    bottom: 30%; /* initial position in the middle of the viewport */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    transition: transform 0.5s ease-out; /* animate the transform property */
+}
+
+.hero-button-float.scrolled .btn {
+    transform: translate(calc(50vw - 50% - 70px), calc(50vh - 50% - 70px)); /* move to the right corner when scrolled */
+}
