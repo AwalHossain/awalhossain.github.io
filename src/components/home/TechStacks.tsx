@@ -29,11 +29,7 @@ const clients = [
   { name: 'roger', image: '../docs/roger.png' },
 ];
 
-const ClientCard = ({ name, image }: { name: string, image: string }) => (
-  <div className={`client-item ${name} flex justify-center items-center bg-white border-transparent h-28 rounded-lg w-44 m-2`}>
-    <img className="w-28" src={image} alt={name} />
-  </div>
-);
+
 
 const TechStacks = () => (
   <section className="clients my-20 py-4">
