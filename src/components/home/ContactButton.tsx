@@ -26,7 +26,7 @@ const ContactButton = () => {
                     ref={buttonRef}
                     to={`${routes.projects.path}/#details`}
                     title={"caption"}
-                    className="btn block font-custom2 w-[180px] bg-red-600 text-white h-[50px] py-4 px-8 text-sm lg:text-[14px] font-semibold text-center leading-5 uppercase rounded-3xl border-0 mt-8 lg:mt-[32px] outer"
+                    className="btn block w-[180px] bg-red-600 text-white h-[50px] py-4 px-8 text-sm lg:text-[14px] font-semibold text-center leading-5 uppercase rounded-3xl border-0 mt-8 lg:mt-[32px] outer"
                 >
                     <span>Let's Talk</span>
                 </Link>
