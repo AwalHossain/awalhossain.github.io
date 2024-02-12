@@ -1,0 +1,8 @@
+.foot {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    padding: 192px 0 0;
+    background-image: linear-gradient(to bottom right,#c04de2,#340c7f);
+}
+
