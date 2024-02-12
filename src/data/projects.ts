@@ -1,4 +1,6 @@
-export const projects = {
+import { Projects } from "../types/Project";
+
+export const projects:Projects = {
   'Reely-A-MERN-Video-Streaming-App': {
     id: 'Reely-A-MERN-Video-Streaming-App',
     name: '🎥 Reely- A MERN Video Streaming App',
@@ -49,6 +51,25 @@ export const projects = {
         link: { url: 'https://www.producthunt.com/posts/js-image-carver', caption: 'Product page' },
       },
     ],
+    features:[
+      [
+        'Users can upload videos and optionally, images to the server. The progress of video processing is displayed in real-time',
+        'Users can browse and play videos, similar to YouTube. Each video displays its view count, duration, and upload time',
+        'Users can like and unlike videos, enhancing engagement and interaction',
+        'A tag system is implemented to display related videos when a user plays a video',
+        'Users can manage their own videos, including updating and deleting.',
+        'The frontend is optimized with React.memo, useMemo, and useCallback for efficient rendering'
+      ],
+      [
+        'Real-time video processing with notifications upon completion',
+        'Three-tier backend services for API, video conversion, and HTTP serving',
+        'Converts any format video into MP4 and applies a watermark if an image is provided',
+        'Create thumbnail from the video',
+        'Transforms the video into adaptive bitrate HLS format (480p & 1080p) for optimal streaming quality.',
+        'Upon successful conversion, the video is uploaded to a CDN bucket storage. This allows users to stream videos seamlessly from anywhere in the world.',
+        'BullMQ manages the job queue, passing one job to the next upon completion',]
+    ],
+    overview:"MERN Video Streaming is a cutting-edge, open-source platform for video streaming, offering a comprehensive, full-stack solution utilizing the latest MERN stack technologies. With MERN Video Streaming, users can easily upload, manage, and stream videos on demand, providing a seamless experience. This project features a video processing capability that provides real-time notifications upon completion.The backend is comprised of three services, utilizing Redis messaging for communication. These include an API server, a video conversion service, and an HTTP server serving HLS video files. On the client side, the project uses create-react-app and MUI library, along with socket.io-client and React Context.",
     featured:{
       isFeatured: true,
       priority: 1,
@@ -58,7 +79,8 @@ export const projects = {
         'MERN Video Streaming is a cutting-edge, open-source platform for video streaming',
       ],
       id: 'Reely-A-MERN-Video-Streaming-App',
-    }
+    },
+    youtubeURL:"<iframe width='80%' height='315' src='https://www.youtube.com/embed/RCRwublmR9E?si=kN1RwckxAq2zIKEm' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
   },
   'Bookish-A-Book-Management-Site': {
     id: 'Bookish-A-Book-Management-Site',
@@ -75,7 +97,7 @@ export const projects = {
       'Bookish is a web application that allows users to discover, review, and manage books',
     ],
     tags: [
-      { name: 'ReactJS' },
+      { name: 'ReactJS' }, 
       { name: 'NodeJs' },
       { name: 'ExpressJs' },
       { name: 'MongoDB' },
@@ -115,7 +137,19 @@ export const projects = {
         'Bookish is a web application that allows users to discover, review, and manage books',
       ],
       id: 'Bookish-A-Book-Management-Site',
-    }
+    },
+    features:[
+      [
+        'Users can browse a list of all books on the website, or they can search for books by title, author, or genre',
+        'Users can filter the list of books by title, author, genre, publication date, and other criteria',
+        'Logged-in users can add reviews for books they have read. Reviews should include a rating, a brief summary, and any other thoughts the user has about the book',
+        'Logged-in users can add books to their wishlist and reading list',
+        'Logged-in users can add books to the website by providing the title, author, genre, publication date, and other information.',
+        'Logged-in users can delete books they have added to the website'
+      ]
+    ],
+    overview:"Bookish is a user-friendly web application designed to cater to book enthusiasts by providing a platform for discovering, reviewing, and managing books. With a focus on simplicity and intuitive design, Bookish offers a range of features to enhance the user experience. At its core, Bookish enables users to explore a vast collection of books through various means. Whether browsing through a comprehensive list or conducting targeted searches by title, author, or genre, users can easily find books of interest. Additionally, the application provides robust filtering options, allowing users to refine their search results based on specific criteria such as title, author, genre, and publication date.",
+    youtubeURL:""
   },
   'DevBlog-a-developer-blog-site': {
     id: 'DevBlog-a-developer-blog-site',
@@ -172,7 +206,15 @@ export const projects = {
         'Dev-Blog is a user-friendly blog site featuring several blogs on various topics related to development',
       ],
       id: 'DevBlog-a-developer-blog-site',
-    }
+    },
+    features:[
+      [   "Display all blogs in an organized grid layout",
+      "Users can filter blogs based on their preferences",
+      "Sorting: Blogs can be sorted by newest addition, most liked, and default",
+      "Users can like blogs and save them for later reading",]
+    ],
+    overview:"Dev-Blog is a user-friendly blog site featuring several blogs on various topics related to development. The site utilizes a grid system to display all the blogs, allowing users to filter and sort them based on their preferences. Users can also like and save blogs for reading later. This project is built using React, Node.js, MongoDB, RTK Query, and TypeScript. Note that the site is still a work in progress, with additional features such as commenting, authentication, and the ability to add new blogs planned for future development.",
+    youtubeURL:""
   },
   'pc-builder': {
     id: 'pc-builder',
@@ -227,7 +269,16 @@ export const projects = {
         'Discover and customize your dream PC with our intuitive builder, featuring organized component categories',
       ],
       id: 'pc-builder',
-    }
+    },
+    features:[
+    [  "Users can browse and select components for their PC build",
+    "Users can view detailed information about each component",
+    "Users can add and remove components from their build",
+    "Users can view the total cost of their build",
+    "Users can save their build for later viewing",]
+    ],
+    overview:"The PC Builder application is a comprehensive, user-friendly platform designed to assist both tech enthusiasts and novices in creating their ideal personal computer setup. This web-based tool provides a streamlined, intuitive interface where users can browse through a wide array of PC components, view detailed information about each product, and select the components they want to include in their build. The application is deployed on Vercel and can be accessed via a live link, making it easily accessible to users worldwide.",
+    youtubeURL:""
   },
   'health-coach': {
     id: 'health-coach',
@@ -282,6 +333,15 @@ export const projects = {
         'Healthcoach is your all-in-one platform for achieving holistic wellness, offering personalized coaching, diverse health options, and expert guidance.',
       ],
       id: 'health-coach',
-    }
+    },
+    features:[
+      ["User can able choose trainer for their health training program",
+      "User will able set meeting with professional health coach",
+      "User can track their progress and set goals for their health journey",
+      "User can access a library of educational resources and articles on various health topics",
+      "User can connect with a community of like-minded individuals for support and motivation"]
+    ],
+    overview: "At Healthcoach, our mission is to guide individuals on their journey towards holistic health and well-being. We understand that achieving optimal health requires a multifaceted approach, which is why we offer a comprehensive range of services and resources designed to empower our users to become the best version of themselves.",
+    youtubeURL:""
   },
 };
