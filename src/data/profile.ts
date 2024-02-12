@@ -13,7 +13,7 @@ export const profile = {
     caption: 'Awal Hossain',
   },
   location: {
-    name: 'Dhaka, The Bangladesh',
+    name: 'Dhaka, Bangladesh',
   },
   tags: [
     { name: 'Full Stack' },
