@@ -13,6 +13,7 @@ import HyperLink from '../shared/HyperLink';
 import Row from '../shared/Row';
 import Tags from '../shared/Tags';
 import PhotoGrids from './PhotoGrids';
+import H, { hLevel } from '../shared/H';
 
 type ProjectProps = {
     project: ProjectType
@@ -24,7 +25,7 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
   const { project } = props;
 
   const projectTags = project?.tags ? (
-    <div>
+    <div className='mt-5'>
       <Tags tags={project.tags} numToShow={tagsPerProject} />
     </div>
   ) : null;
@@ -44,6 +45,26 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
       </p>
     ),
   ) : null;
+  const projectFeaturesFrontend = project?.features ? project?.features[0]?.map(
+    (feature: string | null, index: number) => (
+      <li key={index}>
+        {feature}
+      </li>
+    ),
+  ) : null;
+  const projectFeaturesBackend = project?.features ? project?.features[1]?.map(
+    (feature: string | null, index: number) => (
+    <li key={index}>
+      {feature}
+    </li>
+    ),
+  ) : null;
+  const projectOverview = project?.overview ? (
+    <div className="mb-3 font-light">
+      {project.overview}
+    </div>
+  ) : null;
+
 
   const projectSummary = projectSummaryLines ? (
     <div className="mb-3 font-light">
@@ -146,16 +167,38 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
     />
   );
 
+  const youtubeLink = project.youtubeURL && (
+    <div className='flex items-center justify-center py-4'>
+
+      <iframe width="80%" height="315" src="https://www.youtube.com/embed/RCRwublmR9E?si=0ijr3VRoL7MfKeNi" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+      allowFullScreen></iframe>
+    </div>
+    
+    )
+
+
   return (
     <>
       {projectCoverCard}
       {projectDatesAndStars}
-      {projectSummary}
-      {projectTags}
       {externalLinks}
       {actions}
-      {archivedStamp}
+      <H level={hLevel.h1} className='font-bold py-2'>Overview
+      </H>
+      {projectOverview}
       {projectAchievements}
+
+      <H level={hLevel.h2} className='font-semibold py-2'>Frontend Feature
+      </H>
+      {projectFeaturesFrontend}
+     {
+      projectFeaturesBackend &&(<H level={hLevel.h2} className='font-semibold py-2'>Backend Feature
+      </H>)
+     } 
+      {projectFeaturesBackend}
+      {projectTags}
+      {archivedStamp}
+      {youtubeLink}
     </>
   );
 };
