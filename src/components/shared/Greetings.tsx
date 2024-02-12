@@ -33,8 +33,7 @@ const Greeting = (): React.ReactElement => {
       Most of my work & open-source {projectsLinkElement} are focused
       on one thing &ndash; <i>to learn in depth & help people learn</i>.
       I thrive in dynamic environments, readily embracing new challenges, and constantly expanding my knowledge. Staying ahead of industry trends is my commitment.
-      I also write {blogLinkElement} about life, web-development
-      and machine learning.
+      I also write {blogLinkElement} about life, web-development, and everything in between.
     </p>
     </div>
   );
