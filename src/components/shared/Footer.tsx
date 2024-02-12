@@ -31,7 +31,7 @@ const Footer = (props: FooterProps): React.ReactElement => {
   return (
     <footer className={`${className} relative flex flex-col items-center justify-center sm:min-h-[550px] xl:min-h-[700px] mt-36 foot bg-cover bg-center`} >
       <div className='z-10 flex flex-col items-center justify-center space-y-4 pb-5'>
-        <H level={hLevel.h2} className="text-center text-white text-2xl">
+        <H level={hLevel.h2} className="text-center text-white text-4xl">
           Got Any ideas to work on?
         </H>
         <button onClick={handleContactClick} className='uppercase text-[12px] rounded-3xl bg-red-600 px-14 py-4 text-white font-bold tracking-widest '>
