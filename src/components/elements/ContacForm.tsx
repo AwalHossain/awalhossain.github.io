@@ -9,6 +9,7 @@ interface ContactFormProps {
 
 const ContactForm = (props:ContactFormProps) => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   // Add a new state variable for the submission status
   const [submissionStatus, setSubmissionStatus] = useState('');
@@ -69,6 +70,51 @@ const handleSubmit = async (event: React.FormEvent) => {
   }, [isOpen]);
 
 
+  // / Add a ref for the modal div
+  const modalRef = React.useRef<HTMLDivElement>(null);
+  
+  useEffect(() => {
+    const modal = modalRef.current;
+    if (modal) {
+      // Add the event listener when the component mounts
+      modal.addEventListener('animationend', () => {
+        setIsClosing(false);
+      });
+    }
+    return () => {
+      if (modal) {
+        // Remove the event listener when the component unmounts
+        modal.removeEventListener('animationend', () => {
+          setIsClosing(false);
+        });
+      }
+    };
+  }, []);
+
+  const handleCloseModal = () => {
+    setIsClosing(true);
+    // Add a delay before calling closeModal
+    setTimeout(() => {
+      closeModal();
+    }, 250); // Replace 500 with the duration of your closing animation in milliseconds
+  };
+
+
+useEffect(() => {
+  let timer: NodeJS.Timeout;
+  if (isOpen) {
+    setIsAnimating(true);
+    timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+  } else {
+    setIsAnimating(false);
+  }
+  console.log(isClosing,'isClosing','isOpen',isOpen);
+  
+  return () => clearTimeout(timer);
+}, [isOpen]);
+
   return (
     <div className="p-6">
     {isOpen && (
@@ -80,11 +126,12 @@ const handleSubmit = async (event: React.FormEvent) => {
   
           <span className="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
   
-          <div onClick={stopPropagation} className={`relative rounded-custom border inline-block align-bottom bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl sm:w-full overflow-y-auto ${isAnimating ? 'animate-slide-down' : ''}`}
-  style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
->
+          <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+  <div ref={modalRef} onClick={stopPropagation} className={`relative rounded-custom border inline-block align-bottom  bg-white text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg md:max-w-xl lg:max-w-3xl xl:max-w-4xl sm:w-full overflow-y-auto ${isAnimating ? 'animate-slide-down' : ''} ${isClosing ? 'animate-slide-up' : ''}`}>
+           
+
               <img src={contact} alt="Contact" className="absolute top-0 left-0 h-44 w-52 lg:h-64 lg:w-64" />
-              <button onClick={closeModal} className="absolute right-10 top-10 m-2 text-gray-600 hover:text-gray-900 z-50">
+              <button onClick={handleCloseModal} className="absolute right-10 top-10 m-2 text-gray-600 hover:text-gray-900 z-50">
                 X
               </button>
               <div className=" flex items-center justify-center h-auto bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
@@ -155,7 +202,8 @@ const handleSubmit = async (event: React.FormEvent) => {
                 </div>
               </div>
               <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-              </div>
+            </div>
+            </div>
             </div>
           </div>
         </div>
