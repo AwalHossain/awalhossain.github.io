@@ -8,7 +8,6 @@ import ContactForm from '../elements/ContacForm';
 const NavMenu = (): React.ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
   const handleContactClick = (event: React.MouseEvent) => {
