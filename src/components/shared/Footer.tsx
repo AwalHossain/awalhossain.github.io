@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { profile } from '../../data/profile';
 import ContactForm from '../elements/ContacForm';
 import H, { hLevel } from './H';
@@ -16,7 +16,17 @@ type FooterProps = {
 };
 
 const Footer = (props: FooterProps): React.ReactElement => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const closeModal = () => setIsModalOpen(false);
+
   const { className = '', withFeedback = false, withSupport = true } = props;
+
+  const handleContactClick = (event: React.MouseEvent) => {
+    event.preventDefault(); // Prevent the link from navigating
+    setIsModalOpen(true); // Open the modal
+  };
 
   return (
     <footer className={`${className} relative flex flex-col items-center justify-center sm:min-h-[550px] xl:min-h-[700px] mt-36 foot bg-cover bg-center`} >
@@ -24,7 +34,7 @@ const Footer = (props: FooterProps): React.ReactElement => {
         <H level={hLevel.h2} className="text-center text-white text-2xl">
           Got Any ideas to work on?
         </H>
-        <button className='uppercase text-[12px] rounded-3xl bg-red-600 px-14 py-4 text-white font-bold tracking-widest '>
+        <button onClick={handleContactClick} className='uppercase text-[12px] rounded-3xl bg-red-600 px-14 py-4 text-white font-bold tracking-widest '>
           Let's Talk
         </button>
         <div className="flex flex-row items-center justify-center">
@@ -43,6 +53,11 @@ const Footer = (props: FooterProps): React.ReactElement => {
       <div className='footer-mask absolute inset-0 z-0 hidden sm:block'>
         <img className='w-full h-full object-cover object-center' src={lgmask} alt="" />
       </div>
+      {
+      isModalOpen && (
+        <ContactForm isOpen={isModalOpen} closeModal={closeModal} />
+      )
+    }
     </footer>
   );
 };
