@@ -80,7 +80,7 @@ export const projects:Projects = {
       ],
       id: 'Reely-A-MERN-Video-Streaming-App',
     },
-    youtubeURL:"<iframe width='80%' height='315' src='https://www.youtube.com/embed/RCRwublmR9E?si=kN1RwckxAq2zIKEm' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen></iframe>"
+    youtubeURL:"https://youtu.be/RCRwublmR9E"
   },
   'Bookish-A-Book-Management-Site': {
     id: 'Bookish-A-Book-Management-Site',
