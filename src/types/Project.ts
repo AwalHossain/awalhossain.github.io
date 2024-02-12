@@ -1,6 +1,7 @@
 import { DateString } from './Date';
 import { Details } from './Details';
 import { Featured } from './Featured';
+import { GitHubACC } from './Github';
 import { Image } from './Image';
 import { Link } from './Link';
 import { Tag } from './Tag';
@@ -17,6 +18,7 @@ export type Project = {
     srcURL?: Link,
     demoURL?: Link,
     startDate?: DateString,
+    gitHubRepo: GitHubACC,
     endDate?: DateString,
     tags?: Tag[],
     archived?: boolean,
@@ -25,6 +27,9 @@ export type Project = {
     links?: Link[],
     details?: Details[],
     featured: Featured,
+    features?: Array<Array<string>>;
+    youtubeURL?: string,
+    overview?: string,
 };
 
 export type Projects = Record<ProjectID, Project>;
