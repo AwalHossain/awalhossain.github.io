@@ -44,15 +44,7 @@ const NavMenu = (): React.ReactElement => {
     <>
     <ul className="flex flex-row">
       {links}
-      {/* <li className="ml-5 sm:flex hidden">
-        <HyperLink
-          className="uppercase tex-xs"
-          link={{ url: 'https://drive.google.com/file/d/1kylDDOuym_Ky1Fu_39PrVRm-aeMGefvR/view?usp=sharing' }}
-        >
-          resume
-        </HyperLink>
-      </li> */}
-      <li className="ml-5 text- uppercase">
+      <li className="ml-5 text- uppercase cursor-pointer">
         <ThemeToggle />
       </li>
     </ul>
