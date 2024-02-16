@@ -12,7 +12,7 @@ const Badge = (props: BadgeProps): React.ReactElement | null => {
     return null;
   }
 
-  const commonClassName = 'bg-gray-200 px-1 rounded text-xs';
+  const commonClassName = 'bg-gray-200 dark:bg-gray-800 px-1 rounded text-xs';
   const classes = `${commonClassName} ${className}`;
 
   return (
