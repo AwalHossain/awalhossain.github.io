@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import aws from '../../images/tech/aws.svg';
 import azure from '../../images/tech/azure.svg';
 import css from '../../images/tech/css.svg';
@@ -18,24 +18,42 @@ import typescript from '../../images/tech/typescript.svg';
 import './TechStacks.css';
 import H, { hLevel } from '../shared/H';
 
-const clients = [
-  { name: 'hoopsai', image: '../docs/hoopsai.png' },
-  { name: 'agoda', image: '../docs/agoda.png' },
-  { name: 'getsafe', image: '../docs/getsafe.png' },
-  { name: 'grab', image: '../docs/grab.png' },
-  { name: 'crisp', image: '../docs/crisp.png' },
-  { name: 'anyleads', image: '../docs/anyleads.png' },
-  { name: 'teachable', image: '../docs/teachable.png' },
-  { name: 'flyr', image: '../docs/flyr.png' },
-  { name: 'roger', image: '../docs/roger.png' },
-];
 
 
 
-const TechStacks = () => (
+const TechStacks = () =>{ 
+  let observer:any;
+
+  useEffect(()=>{
+    observer = new IntersectionObserver((entries)=>{
+      entries.forEach(entry=>{
+        
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }else{
+          entry.target.classList.remove('show');
+        }
+      })
+    })
+
+    const items = document.querySelectorAll('.client-item');
+    items.forEach(item=>{
+      observer.observe(item);
+    }) 
+        // Clean up function
+        return () => {
+          items.forEach(item => {
+            observer.unobserve(item);
+          });
+        };
+  },[])
+
+ 
+
+  return(
   <section className="clients my-20 py-4">
     <div className=" m-auto overflow-hidden">
-      <div className=" text-center mb-20 relative">
+      <div className=" text-center mb-20 relative ">
         {/* <h1 className=" text-black text-5xl font-semibold pb-5">Skills</h1> */}
         <H level={hLevel.h1} className="mb-1 font-extrabold tracking-tight">
         Skills
@@ -43,7 +61,7 @@ const TechStacks = () => (
         <p className=" dark:text-white text-2xl mb-4">I’ve been working with the skills.</p>
         <div className="absolute w-10 h-0.5 bg-red-500 left-1/2 transform -translate-x-1/2" />
       </div>
-      <div className="content-group flex flex-col lg:flex-row justify-center">
+      <div className="content-group group  flex flex-col lg:flex-row justify-center">
         <div className="content-card flex flex-col justify-center">
 
           <div className="client-item one hoopsai flex justify-center items-center bg-gray-100 dark:bg-gray-900 w-full lg:w-3/6 h-20 lg:h-28 rounded-lg m-2">
@@ -111,6 +129,8 @@ const TechStacks = () => (
       </div>
     </div>
   </section>
-);
+  )
+}
+;
 
 export default TechStacks;
