@@ -16,4 +16,47 @@ Adding base styles
 @tailwind components;
 @tailwind utilities;
 
+/* 1 */
+:root {
+  --color-primary: #CD104D;
+  --color-text: #2e353f;
+  --color-text-light: #4f5969;
+  --color-heading: #1a202c;
+  --color-heading-black: #000000;
+  --color-accent: #d1dce5;
+  --color-background: #FFFFFF;
+  --dark-mode: #000;
+  --dark-mode-hf: #CD104D;
+}
+
+/* 2 */
+body {
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* 3 */
+body.dark {
+  --color-background: #171717;
+  --color-primary: #CD104D;
+  --color-text: #ffffff;
+  --color-text-light: #4f5969;
+  --color-heading: #DFDFDE;
+  --color-heading-black: #EDEDED;
+  --color-accent: #d1dce5;
+  --image: url("../images/mode/moon.svg");
+}
+
+/* 4 */
+body.light {
+  --color-primary: #CD104D;
+  --color-text: #2e353f;
+  --color-text-light: #4f5969;
+  --color-heading: #1a202c;
+  --color-heading-black: black;
+  --color-accent: #d1dce5;
+  --color-background: #FFFFFF;
+  --image: url("../images/mode/sun.svg");
+}
+
 @import "custom.css";
