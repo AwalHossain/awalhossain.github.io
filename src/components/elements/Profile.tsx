@@ -67,6 +67,14 @@ const Profile = (props: ProfilProps): React.ReactElement => {
   const tagsElement = profile?.tags ? (
     <div className="mb-4">
       <Tags tags={profile.tags} />
+      <a
+      href='https://drive.google.com/file/d/1kylDDOuym_Ky1Fu_39PrVRm-aeMGefvR/view?usp=sharing'
+      target='_blank'
+      key={'na'}
+      className="resume cursor-pointer inline-block bg-gray-200 dark:bg-gray-800 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
+    >
+      RESUME
+    </a >
     </div>
   ) : null;
 
