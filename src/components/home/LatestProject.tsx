@@ -29,11 +29,11 @@ const LatestProject = (props:LatesProps) => {
     
 
   return (
-    <div className="grid grid-cols-1  md:grid-cols-2 gap-4 latest shadow-xl rounded-lg">
+    <div className="grid grid-cols-1  md:grid-cols-2 gap-4 latest shadow-xl rounded-lg dark:bg-gray-900">
     <div className='order-1 md:order-2 text-center rounded-t-lg md:rounded-l-l overflow-hidden'>
         {projectCover}
     </div>
-    <div className={ `p-4 flex flex-col justify-center items-center ${index % 2 === 0 ? 'order-2 md:order-2' : 'order-1 md:order-1'}` }>
+    <div className={ `p-4 flex flex-col justify-center sm:pl-10 ${index % 2 === 0 ? 'order-2 md:order-2' : 'order-1 md:order-1'}` }>
         <H level={hLevel.h2} className="mb-1 uppercase font-extrabold tracking-tighter">
         {project.featured.title}
       </H>
