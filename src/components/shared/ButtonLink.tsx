@@ -11,8 +11,8 @@ const ButtonLink = (props: ButtonLinkProps): React.ReactElement => {
     ...rest
   } = props;
 
-  const hoverButtonClasses = `hover:bg-black hover:text-white ${hoverClassName}`;
-  const buttonClasses = 'bg-white py-1 px-2 rounded shadow-sm border border-solid border-gray-300';
+  const hoverButtonClasses = `hover:bg-black hover:text-white ${hoverClassName} dark:hover:bg-gray-500`;
+  const buttonClasses = 'bg-white dark:bg-gray-800 py-1 px-2 rounded shadow-sm border border-solid border-gray-300';
   const classes = `${className} ${buttonClasses}`;
 
   return (
