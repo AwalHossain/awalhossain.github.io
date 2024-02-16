@@ -16,9 +16,9 @@ export const hLevel = {
   h3: 'h3',
 };
 const classes = {
-  [hLevel.h1]: 'text-3xl',
-  [hLevel.h2]: 'text-2xl',
-  [hLevel.h3]: 'text-xl',
+  [hLevel.h1]: 'text-3xl dark:text-white',
+  [hLevel.h2]: 'text-2xl dark:text-white',
+  [hLevel.h3]: 'text-xl dark:text-white',
 };
 
 const H = (props: HProps): React.ReactElement | null => {
