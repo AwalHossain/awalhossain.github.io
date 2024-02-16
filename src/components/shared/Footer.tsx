@@ -29,7 +29,7 @@ const Footer = (props: FooterProps): React.ReactElement => {
   };
 
   return (
-    <footer className={`${className} relative flex flex-col items-center justify-center sm:min-h-[550px] xl:min-h-[700px] mt-36 foot bg-cover bg-center`} >
+    <footer className={`${className} relative flex flex-col items-center justify-center sm:min-h-[550px] xl:min-h-[700px] mt-36 foot bg-cover bg-center bg-custom-gradient dark:bg-custom-dark-gradient`} >
       <div className='z-10 flex flex-col items-center justify-center space-y-4 pb-5'>
         <H level={hLevel.h2} className="text-center text-white text-4xl">
           Got Any ideas to work on?
@@ -41,7 +41,7 @@ const Footer = (props: FooterProps): React.ReactElement => {
           <SocialLinks
             links={profile?.socialLinks}
             expandable={false}
-            iconClassName="w-10 h-10 bg-white rounded-full p-2"
+            iconClassName="w-10 h-10 bg-white dark:bg-gray-800 rounded-full p-2"
             itemClassName="mr-2 ml-2"
           />
         </div>
@@ -50,7 +50,7 @@ const Footer = (props: FooterProps): React.ReactElement => {
           <img className='w-full h-full object-cover block sm:hidden' src={pattern} alt="" />
           <img className='w-full h-full object-cover hidden sm:block' src={lgpattern} alt="" />
       </div>
-      <div className='footer-mask absolute inset-0 z-0 hidden sm:block'>
+      <div className='footer-mask absolute inset-0 z-0 hidden sm:block dark:hidden'>
         <img className='w-full h-full object-cover object-center' src={lgmask} alt="" />
       </div>
       {
