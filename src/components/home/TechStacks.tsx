@@ -40,71 +40,71 @@ const TechStacks = () => (
         <H level={hLevel.h1} className="mb-1 font-extrabold tracking-tight">
         Skills
       </H>
-        <p className=" text-black text-2xl mb-4">I’ve been working with the skills.</p>
+        <p className=" dark:text-white text-2xl mb-4">I’ve been working with the skills.</p>
         <div className="absolute w-10 h-0.5 bg-red-500 left-1/2 transform -translate-x-1/2" />
       </div>
       <div className="content-group flex flex-col lg:flex-row justify-center">
         <div className="content-card flex flex-col justify-center">
 
-          <div className="client-item one hoopsai flex justify-center items-center bg-gray-100 w-full lg:w-3/6 h-20 lg:h-28 rounded-lg m-2">
+          <div className="client-item one hoopsai flex justify-center items-center bg-gray-100 dark:bg-gray-900 w-full lg:w-3/6 h-20 lg:h-28 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={html} alt="name" />
           </div>
 
         </div>
         <div className="content-card flex flex-col justify-center">
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 w-full md:w-3/12 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 w-full md:w-3/12 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={css} alt="name" />
           </div>
-          <div className="client-item hoopsai two flex justify-center items-center bg-gray-100 w-full md:w-3/12 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai two flex justify-center items-center bg-gray-100 dark:bg-gray-900 w-full md:w-3/12 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={js} alt="name" />
           </div>
         </div>
         <div className="content-card flex flex-col justify-center">
-          <div className="client-item hoopsai three flex justify-center items-center bg-gray-100 w-full lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai three flex justify-center items-center bg-gray-100 dark:bg-gray-900 w-full lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={typescript} alt="name" />
           </div>
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 w-full lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 w-full lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={node} alt="name" />
           </div>
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 w-full lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 w-full lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={tailwind} alt="name" />
           </div>
         </div>
         <div className="content-card flex flex-col justify-center">
-          <div className="client-item react four hoopsai flex justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item react four hoopsai flex justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={react} alt="name" />
           </div>
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={next} alt="name" />
           </div>
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={gatsby} alt="name" />
           </div>
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={redux} alt="name" />
           </div>
         </div>
         <div className="content-card flex flex-col justify-center">
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={mongodb} alt="name" />
           </div>
-          <div className="client-item five hoopsai flex justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item five hoopsai flex justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={postgres} alt="name" />
           </div>
-          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai lg:flex hidden justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={redis} alt="name" />
           </div>
         </div>
         <div className="content-card flex flex-col justify-center">
-          <div className="client-item hoopsai flex six justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item hoopsai flex six justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={docker} alt="name" />
           </div>
-          <div className="client-item lg:flex hidden hoopsai  justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item lg:flex hidden hoopsai  justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={azure} alt="name" />
           </div>
         </div>
         <div className="content-card  flex flex-col justify-center">
-          <div className="client-item seven hoopsai flex justify-center items-center bg-gray-100 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
+          <div className="client-item seven hoopsai flex justify-center items-center bg-gray-100 dark:bg-gray-900 lg:w-3/5 h-20 lg:h-24 rounded-lg m-2">
             <img className="object-contain w-full h-full" src={aws} alt="name" />
           </div>
         </div>
