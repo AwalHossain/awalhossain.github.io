@@ -76,7 +76,7 @@ const Profile = (props: ProfilProps): React.ReactElement => {
 
   return (
     <div>
-      <div className="flex justify-center flex-col items-center sm:flex-row mb-12">
+      <div className="flex justify-center flex-col items-center sm:flex-row mb-12 ">
         {avatarElement}
         <div className="flex flex-col justify-center items-center sm:items-start">
           {userNameElement}
