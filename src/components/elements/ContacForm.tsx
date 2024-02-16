@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import contact from "../../images/contact.png";
-import "./contact.css";
+import './contact.css'
 interface ContactFormProps {
   isOpen: boolean;
   closeModal: () => void;
@@ -22,7 +22,7 @@ const ContactForm = (props: ContactFormProps) => {
   const formAction = "https://macen-rouge.vercel.app/contact";
 
   const inputClass =
-    "border py-2 px-3 mb-3 rounded border-gray-300 border-solid appearance-none";
+    "border py-2 px-3 mb-3 rounded border-gray-300 border-solid appearance-none dark:bg-gray-800";
   // Modify the form submission handler to use Fetch API
   const handleSubmit = async (event: React.FormEvent) => {
     console.log("fromData", event.target);
@@ -119,7 +119,7 @@ const ContactForm = (props: ContactFormProps) => {
   }, [isOpen]);
 
   return (
-    <div className="p-6">
+    <div className="p-6 ">
       {isOpen && (
         <div
           onClick={closeModal}
@@ -130,7 +130,7 @@ const ContactForm = (props: ContactFormProps) => {
               className="fixed inset-0 transition-opacity"
               aria-hidden="true"
             >
-              <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
+              <div className="absolute inset-0 bg-gray-500  opacity-75"></div>
             </div>
 
             <span
@@ -166,14 +166,14 @@ const ContactForm = (props: ContactFormProps) => {
                   />
                   <button
                     onClick={handleCloseModal}
-                    className="absolute right-10 top-10 m-2 text-gray-600 hover:text-gray-900 z-50"
+                    className="absolute right-10 top-10  hover:text-gray-900 z-50 p-2 text-black dark:text-white "
                   >
                     X
                   </button>
-                  <div className=" flex items-center justify-center h-auto bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div className=" flex items-center justify-center h-auto bg-white dark:bg-gray-950 px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                     <div className="">
                       <div className="my-20 mx-5 z-50">
-                        <h3 className="text-3xl leading-6 font-bold text-gray-900 text-center py-4">
+                        <h3 className="text-3xl leading-6 font-bold text-gray-900 dark:text-white text-center py-4">
                           Let's Talk
                         </h3>
                         <p className="text-sm mb-3 text-center">
@@ -228,7 +228,7 @@ const ContactForm = (props: ContactFormProps) => {
 
                             <button
                               type="submit" // Set button type to "button" to prevent form submission behavior
-                              className="transition duration-200 ease-in-out bg-black text-white py-2 px-3 rounded shadow-sm cursor-pointer hover:bg-gray-800"
+                              className="transition duration-200 ease-in-out bg-black dark:bg-gray-800 text-white py-2 px-3 rounded shadow-sm cursor-pointer hover:bg-gray-800"
                             >
                               {isLoading ? "Sending..." : "Send"}
                             </button>
