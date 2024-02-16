@@ -12,7 +12,7 @@ const Tag = (props: TagProps): React.ReactElement => {
   return (
     <span
       key={tag.name}
-      className="inline-block bg-gray-200 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
+      className="inline-block bg-gray-200 dark:bg-gray-800 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
     >
       {tag.name}
     </span>
