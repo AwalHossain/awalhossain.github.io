@@ -4,6 +4,7 @@ import { Link } from '../../types/Link';
 import { Route, routes } from '../constants/routes';
 import HyperLink from './HyperLink';
 import ContactForm from '../elements/ContacForm';
+import ThemeToggle from '../config/ThemeToggle';
 
 const NavMenu = (): React.ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -20,18 +21,21 @@ const NavMenu = (): React.ReactElement => {
 
     // If this is the 'Contact' link, add an onClick handler
     const extraProps = route.name === 'Contact' ? { onClick: handleContactClick } : {};
-
     return (
+      <>
       <li key={route.path} className="ml-5">
         <HyperLink
           link={link}
           className="uppercase text-xs"
           activeClassName="font-bold"
           {...extraProps}
+          
         >
           {route.name}
         </HyperLink>
       </li>
+      </>
+      
     );
   });
 
@@ -40,14 +44,16 @@ const NavMenu = (): React.ReactElement => {
     <>
     <ul className="flex flex-row">
       {links}
-      <li className="ml-5 sm:flex hidden">
+      {/* <li className="ml-5 sm:flex hidden">
         <HyperLink
-          className="uppercase text-sm font-semibold border-2 border-solid border-black px-2 rounded"
+          className="uppercase tex-xs"
           link={{ url: 'https://drive.google.com/file/d/1kylDDOuym_Ky1Fu_39PrVRm-aeMGefvR/view?usp=sharing' }}
-          hoverClassName="hover:bg-black hover:text-white"
         >
-          RESUME
+          resume
         </HyperLink>
+      </li> */}
+      <li className="ml-5 text- uppercase">
+        <ThemeToggle />
       </li>
     </ul>
     {
