@@ -1,7 +1,7 @@
 import { BiInfoCircle } from '@react-icons/all-files/bi/BiInfoCircle';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
 import { IoPlay } from '@react-icons/all-files/io5/IoPlay';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from '../../types/Link';
 import { Project as ProjectType } from '../../types/Project';
 import ButtonLink from '../shared/ButtonLink';
@@ -175,6 +175,11 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
     </div>
     
     )
+
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+  
 
 
   return (
