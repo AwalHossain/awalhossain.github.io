@@ -84,7 +84,7 @@ export const projects:Projects = {
   },
   'Bookish-A-Book-Management-Site': {
     id: 'Bookish-A-Book-Management-Site',
-    name: '📚 Bookish- A Book Management Site',
+    name: '📚 Bookish Book Management Site',
     server: { url: 'https://github.com/AwalHossain/Bookish' },
     client: {
       url: 'https://github.com/AwalHossain/Bookish'
