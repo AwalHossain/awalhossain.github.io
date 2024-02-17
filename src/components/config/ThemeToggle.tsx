@@ -14,7 +14,9 @@ export default function ThemeToggle() {
     } else {
       document.body.classList.remove('dark');
     }
+    if(typeof window !== 'undefined'){
       window.localStorage.setItem('theme', isDark);
+    }
   }, [isDark])
 
   return (
@@ -29,6 +31,9 @@ export default function ThemeToggle() {
 
 
 function getDefaultTheme() {
-  const savedTheme = window.localStorage.getItem('theme');
-  return savedTheme ? savedTheme : 'light';
+  if(typeof window !== 'undefined'){
+    const savedTheme = window.localStorage.getItem('theme');
+    return savedTheme ? savedTheme : 'light';
+  }
+  return 'light';
 }
