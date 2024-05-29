@@ -5,9 +5,9 @@ import { useFluidCover } from '../../hooks/useFluidCover';
 import { Image } from '../../types/Image';
 
 type FluidImageProps = {
-    image?: Image | null | undefined,
-    fluidImage?: IGatsbyImageData | null | undefined,
-    className?: string,
+  image?: Image | null | undefined,
+  fluidImage?: IGatsbyImageData | null | undefined,
+  className?: string,
 };
 
 const FluidImage = (props: FluidImageProps): React.ReactElement | null => {
@@ -31,7 +31,7 @@ const FluidImage = (props: FluidImageProps): React.ReactElement | null => {
   return (
     <GatsbyImage
       image={fluidImage}
-      style={{ height: '100%' }}
+      style={{ height: '100%', width: "100%", objectFit: 'fill' }}
       alt={image?.caption || ''}
       title={image?.caption || ''}
       className={className}
