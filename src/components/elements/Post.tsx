@@ -8,12 +8,15 @@ import PageHeader from '../shared/PageHeader';
 import Row from '../shared/Row';
 
 type PostProps = {
-    post: PostTemplateQuery,
-    children: React.ReactNode,
+  post: PostTemplateQuery,
+  children: React.ReactNode,
 };
 
 const Post = (props: PostProps): React.ReactElement | null => {
   const { post, children } = props;
+
+  console.log(post, 'post from post', children, 'children from post');
+
 
   const dateElement = post?.mdx?.frontmatter?.date ? (
     <Row className="mr-6 mb-6 text-gray-500 text-sm">
