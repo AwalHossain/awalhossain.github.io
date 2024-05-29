@@ -3,6 +3,7 @@ import { Projects } from "../types/Project";
 export const projects:Projects = {
   'Reely-A-MERN-Video-Streaming-App': {
     id: 'Reely-A-MERN-Video-Streaming-App',
+    blogURL:"/blog/2024/streaming",
     name: '🎥 Reely- A MERN Video Streaming App',
     server: { url: 'https://github.com/awalHossain/video_streaming_service_server/' },
     client: {
@@ -89,8 +90,8 @@ export const projects:Projects = {
     client: {
       url: 'https://github.com/AwalHossain/Bookish'
     },
-    demoURL: { url: 'https://bookishly.netlify.app/' },
-    cover: { srcPath: 'projects/bookish/book.png' },
+    demoURL: { url: 'https://oceanlibrary.netlify.app/' },
+    cover: { srcPath: 'projects/bookish/reader.jpg' },
     startDate: '2023-09-18',
     endDate: '2023-09-27',
     summary: [
@@ -132,7 +133,7 @@ export const projects:Projects = {
       isFeatured: true,
       priority: 2,
       title : 'Bookish- A Book Management Site',
-      cover: { srcPath: 'projects/bookish/book.png' },
+      cover: { srcPath: 'projects/bookish/pile.jpg' },
       summary: [
         'Bookish is a web application that allows users to discover, review, and manage books',
       ],
@@ -199,7 +200,7 @@ export const projects:Projects = {
     ],
     featured:{
       isFeatured: true,
-      priority: 4,
+      priority: 3,
       title : 'DevBlog: Developer Community Blog Site',
       cover: { srcPath: 'projects/devblog/blog.png' },
       summary: [
@@ -262,7 +263,7 @@ export const projects:Projects = {
     ],
     featured:{
       isFeatured: true,
-      priority: 3,
+      priority: 4,
       title : 'PC Builder',
       cover: { srcPath: 'projects/pcBuilder/cover.png' },
       summary: [
