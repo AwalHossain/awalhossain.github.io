@@ -8,10 +8,10 @@ export const cardMediaModeRow: CardMediaMode = 'row';
 export const cardMediaModeColumn: CardMediaMode = 'column';
 
 type CardMediaProps = {
-    children: React.ReactNode,
-    className?: string,
-    mode?: CardMediaMode,
-    link?: Link,
+  children: React.ReactNode,
+  className?: string,
+  mode?: CardMediaMode,
+  link?: Link,
 };
 
 const CardMedia = (props: CardMediaProps) => {
