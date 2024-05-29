@@ -30,6 +30,7 @@ export type Project = {
     features?: Array<Array<string>>;
     youtubeURL?: string,
     overview?: string,
+    blogURL?: string,
 };
 
 export type Projects = Record<ProjectID, Project>;
