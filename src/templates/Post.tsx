@@ -4,7 +4,7 @@ import PostScreen from '../components/screens/PostScreen';
 import { PostTemplateQuery } from './__generated__/PostTemplateQuer';
 
 interface BlogPostProps extends PageProps {
-    data: PostTemplateQuery
+  data: PostTemplateQuery
 }
 
 export const query = graphql`
@@ -44,6 +44,7 @@ console.log(query, 'checking post template query');
 
 const Post = (props: BlogPostProps) => {
   const { data, children } = props;
+  console.log(data, 'data from big', children, 'children from big');
 
   return (
     <PostScreen post={data}> {children} </PostScreen>
