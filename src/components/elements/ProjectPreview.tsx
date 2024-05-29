@@ -61,7 +61,9 @@ const ProjectPreview = (props: ProjectPreviewProps): React.ReactElement | null =
     </div>
   ) : null;
 
-  const defaultProjectUrl = project.archived ? undefined : getProjectDetailsLink(project.id);
+  console.log(project.blogURL, 'project.blogURL');
+
+  const defaultProjectUrl = project.archived ? undefined : getProjectDetailsLink(project.blogURL || project.id);
   const demoLink = project.demoURL && !project.archived ? (
     <ButtonLink
       link={project.demoURL}
