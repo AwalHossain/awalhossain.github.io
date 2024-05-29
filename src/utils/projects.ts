@@ -13,7 +13,17 @@ export function projectMapToArray(projects: Projects): Project[] {
 }
 
 export function getProjectDetailsLink(projectID: ProjectID): Link {
-  return {
-    url: `${routes.projects.path}/${projectID}#details`,
-  };
+
+  console.log(projectID.includes('blog'),'projectID.includes(blog)',projectID);
+  
+  if(projectID.includes('blog')) {
+    return {
+      url: `${routes.blog.path}/${projectID.split("/").slice(2).join("/")}`,
+    };
+  }
+    return {
+      url: `${routes.projects.path}/${projectID}`,
+    };
+  
+
 }
