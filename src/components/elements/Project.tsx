@@ -9,14 +9,14 @@ import Card from '../shared/Card';
 import CardMedia from '../shared/CardMedia';
 import DateRange from '../shared/DateRange';
 import FluidImage from '../shared/FluidImage';
+import H, { hLevel } from '../shared/H';
 import HyperLink from '../shared/HyperLink';
 import Row from '../shared/Row';
 import Tags from '../shared/Tags';
 import PhotoGrids from './PhotoGrids';
-import H, { hLevel } from '../shared/H';
 
 type ProjectProps = {
-    project: ProjectType
+  project: ProjectType
 }
 
 const tagsPerProject = 5;
@@ -54,9 +54,9 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
   ) : null;
   const projectFeaturesBackend = project?.features ? project?.features[1]?.map(
     (feature: string | null, index: number) => (
-    <li key={index}>
-      {feature}
-    </li>
+      <li key={index}>
+        {feature}
+      </li>
     ),
   ) : null;
   const projectOverview = project?.overview ? (
@@ -170,16 +170,18 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
   const youtubeLink = project.youtubeURL && (
     <div className='flex items-center justify-center py-4'>
 
-      <iframe width="80%" height="315" src="https://www.youtube.com/embed/RCRwublmR9E?si=0ijr3VRoL7MfKeNi" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-      allowFullScreen></iframe>
+      <iframe width="80%" height="315" src="https://www.youtube.com/embed/RCRwublmR9E?si=0ijr3VRoL7MfKeNi" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen></iframe>
     </div>
-    
-    )
 
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
-  
+  )
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
+
 
 
   return (
@@ -196,14 +198,18 @@ const Project = (props: ProjectProps): React.ReactElement | null => {
       <H level={hLevel.h2} className='font-semibold py-2'>Frontend Feature
       </H>
       {projectFeaturesFrontend}
-     {
-      projectFeaturesBackend &&(<H level={hLevel.h2} className='font-semibold py-2'>Backend Feature
-      </H>)
-     } 
+      {
+        projectFeaturesBackend && (<H level={hLevel.h2} className='font-semibold py-2'>Backend Feature
+        </H>)
+      }
       {projectFeaturesBackend}
       {projectTags}
       {archivedStamp}
       {youtubeLink}
+
+
+
+
     </>
   );
 };
