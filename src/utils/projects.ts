@@ -14,9 +14,9 @@ export function projectMapToArray(projects: Projects): Project[] {
 
 export function getProjectDetailsLink(projectID: ProjectID): Link {
 
-  console.log(projectID.includes('blog'),'projectID.includes(blog)',projectID);
+  console.log(projectID.includes('blog/'),'projectID.includes(blog)',projectID);
   
-  if(projectID.includes('blog')) {
+  if(projectID.includes('blog/')) {
     return {
       url: `${routes.blog.path}/${projectID.split("/").slice(2).join("/")}`,
     };
