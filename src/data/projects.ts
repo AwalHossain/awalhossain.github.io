@@ -83,19 +83,20 @@ export const projects:Projects = {
     },
     youtubeURL:"https://youtu.be/RCRwublmR9E"
   },
-  'Bookish-A-Book-Management-Site': {
-    id: 'Bookish-A-Book-Management-Site',
-    name: '📚 Bookish Book Management Site',
-    server: { url: 'https://github.com/AwalHossain/Bookish' },
+  'Oceanlibrary-A-Book-Management-Site': {
+    id: 'Oceanlibrary-A-Book-Management-Site',
+    name: '📚 Oceanlibrary Book Management Site',
+    blogURL:"/blog/2024/ocean-library",
+    server: { url: 'https://github.com/AwalHo/bookish-server' },
     client: {
-      url: 'https://github.com/AwalHossain/Bookish'
+      url: 'https://github.com/AwalHossain/ocean-library'
     },
     demoURL: { url: 'https://oceanlibrary.netlify.app/' },
     cover: { srcPath: 'projects/bookish/reader.jpg' },
     startDate: '2023-09-18',
     endDate: '2023-09-27',
     summary: [
-      'Bookish is a web application that allows users to discover, review, and manage books',
+      'Oceanlibrary is a web application that allows users to discover, review, and manage books',
     ],
     tags: [
       { name: 'ReactJS' }, 
@@ -132,12 +133,12 @@ export const projects:Projects = {
     featured:{
       isFeatured: true,
       priority: 2,
-      title : 'Bookish- A Book Management Site',
+      title : 'Oceanlibrary- A Book Management Site',
       cover: { srcPath: 'projects/bookish/pile.jpg' },
       summary: [
-        'Bookish is a web application that allows users to discover, review, and manage books',
+        'Oceanlibrary is a web application that allows users to discover, review, and manage books',
       ],
-      id: 'Bookish-A-Book-Management-Site',
+      id: 'Oceanlibrary-A-Book-Management-Site',
     },
     features:[
       [
@@ -149,17 +150,18 @@ export const projects:Projects = {
         'Logged-in users can delete books they have added to the website'
       ]
     ],
-    overview:"Bookish is a user-friendly web application designed to cater to book enthusiasts by providing a platform for discovering, reviewing, and managing books. With a focus on simplicity and intuitive design, Bookish offers a range of features to enhance the user experience. At its core, Bookish enables users to explore a vast collection of books through various means. Whether browsing through a comprehensive list or conducting targeted searches by title, author, or genre, users can easily find books of interest. Additionally, the application provides robust filtering options, allowing users to refine their search results based on specific criteria such as title, author, genre, and publication date.",
+    overview:"Oceanlibrary is a user-friendly web application designed to cater to book enthusiasts by providing a platform for discovering, reviewing, and managing books. With a focus on simplicity and intuitive design, Bookish offers a range of features to enhance the user experience. At its core, Bookish enables users to explore a vast collection of books through various means. Whether browsing through a comprehensive list or conducting targeted searches by title, author, or genre, users can easily find books of interest. Additionally, the application provides robust filtering options, allowing users to refine their search results based on specific criteria such as title, author, genre, and publication date.",
     youtubeURL:""
   },
   'DevBlog-a-developer-blog-site': {
     id: 'DevBlog-a-developer-blog-site',
     name: '📝 DevBlog: Developer Community Blog Site',
+    
     // server: { url: "https://github.com/AwalHossain/Dev-Blog" },
     client: {
       url: 'https://github.com/AwalHossain/Dev-Blog'
     },
-    demoURL: { url: 'https://bookishly.netlify.app/' },
+    demoURL: { url: 'https://developer-blogs-site.vercel.app/' },
     cover: { srcPath: 'projects/devblog/blog.png' },
     startDate: '2023-06-25',
     endDate: '2023-07-12',
