@@ -1,5 +1,6 @@
 import { FiBriefcase } from '@react-icons/all-files/fi/FiBriefcase';
 import React from 'react';
+import { projects } from '../../data/projects';
 import type { Profile as ProfileType } from '../../types/Profile';
 import LatestProject from '../home/LatestProjects';
 import TechStacks from '../home/TechStacks';
@@ -7,9 +8,7 @@ import Avatar from '../shared/Avatar';
 import Greeting from '../shared/Greetings';
 import H, { hLevel } from '../shared/H';
 import Location from '../shared/Location';
-import Tags from '../shared/Tags';
 import SocialLinks from '../shared/socialLinks';
-import {projects} from '../../data/projects';
 
 type ProfilProps = {
   profile: ProfileType
@@ -64,19 +63,19 @@ const Profile = (props: ProfilProps): React.ReactElement => {
     </div>
   ) : null;
 
-  const tagsElement = profile?.tags ? (
-    <div className="mb-4">
-      <Tags tags={profile.tags} />
-      <a
-      href='https://drive.google.com/file/d/1kylDDOuym_Ky1Fu_39PrVRm-aeMGefvR/view?usp=sharing'
-      target='_blank'
-      key={'na'}
-      className="resume cursor-pointer inline-block bg-gray-200 dark:bg-gray-800 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
-    >
-      RESUME
-    </a >
-    </div>
-  ) : null;
+  // const tagsElement = profile?.tags ? (
+  //   <div className="mb-4">
+  //     <Tags tags={profile.tags} />
+  //     <a
+  //     href='https://drive.google.com/file/d/1kylDDOuym_Ky1Fu_39PrVRm-aeMGefvR/view?usp=sharing'
+  //     target='_blank'
+  //     key={'na'}
+  //     className="resume cursor-pointer inline-block bg-gray-200 dark:bg-gray-800 rounded-sm px-2 py-1 text-xs font-normal last:mr-0"
+  //   >
+  //     RESUME
+  //   </a >
+  //   </div>
+  // ) : null;
 
   const socialLinksElement = (
     <SocialLinks links={profile?.socialLinks} />
@@ -91,7 +90,7 @@ const Profile = (props: ProfilProps): React.ReactElement => {
           {positionElement}
           {/* {summaryLinesElement} */}
           {locationElement}
-          {tagsElement}
+          {/* {tagsElement} */}
           {socialLinksElement}
         </div>
       </div>
