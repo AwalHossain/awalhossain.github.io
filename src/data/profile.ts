@@ -4,7 +4,7 @@ import { socialLinks } from './socialLinks';
 export const profile = {
   firstName: 'Awal',
   lastName: 'Hossain',
-  position: 'Currently Seeking a Job',
+  position: 'Contributing to Open Source',
   summary: [
     '',
   ],
