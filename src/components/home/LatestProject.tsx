@@ -1,7 +1,7 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { Project } from '../../types/Project'
-import { routes } from '../constants/routes'
+import { getProjectDetailsLink } from '../../utils/projects'
 import FluidImage from '../shared/FluidImage'
 import H, { hLevel } from '../shared/H'
 
@@ -13,6 +13,7 @@ type LatesProps = {
 
 const LatestProject = (props: LatesProps) => {
   const { project, key, index } = props;
+  console.log(project, 'project seting all');
 
   const projectCover = project.cover ? (
     <div className='h-96'>
@@ -29,7 +30,7 @@ const LatestProject = (props: LatesProps) => {
   ) : null;
 
 
-
+  const defaultProjectUrl = project.archived ? undefined : getProjectDetailsLink(project.blogURL || project.id);
   return (
     <div className="grid grid-cols-1  md:grid-cols-2 gap-4 latest shadow-xl rounded-lg dark:bg-gray-900">
       <div className='order-1 md:order-2 text-center rounded-t-lg md:rounded-l-l overflow-hidden'>
@@ -41,7 +42,7 @@ const LatestProject = (props: LatesProps) => {
         </H>
         {projectSummaryLines}
         <Link
-          to={`${routes.projects.path}/${project.featured.id}#details`}
+          to={defaultProjectUrl?.url!}
           title={"caption"}
           className="block text-white tracking-wider w-[220px] h-[50px] py-4 px-8 text-sm lg:text-[12px] font-bold text-center leading-5 uppercase rounded-3xl border-0 mt-8 lg:mt-[32px] view-project-first"
         >
