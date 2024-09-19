@@ -19,7 +19,7 @@ const Post = (props: PostProps): React.ReactElement | null => {
 
 
   const dateElement = post?.mdx?.frontmatter?.date ? (
-    <Row className="mr-6 mb-6 text-gray-500 text-sm">
+    <Row className="mr-6 mb-6 text-gray-500 text-sm dark:text-white">
       <FiCalendar className="mr-1" />
       {post?.mdx?.frontmatter.date}
     </Row>
@@ -34,9 +34,9 @@ const Post = (props: PostProps): React.ReactElement | null => {
 
   return (
     <div className="flex flex-col items-center">
-      <article className="w-full prose prose-sm sm:prose overflow-hidden prose-red" style={{ maxWidth: '860px' }}>
-        <PageHeader>{post.mdx?.frontmatter?.title || ''}</PageHeader>
-        <Row>
+      <article className="w-full dark:text-white prose prose-sm sm:prose overflow-hidden prose-red dark:prose-headings:text-white" style={{ maxWidth: '860px' }}>
+        <PageHeader className='dark:text-white'>{post.mdx?.frontmatter?.title || ''}</PageHeader>
+        <Row className='dark:text-white'>
           {dateElement}
           {timeToRead}
         </Row>
