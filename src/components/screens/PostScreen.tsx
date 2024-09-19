@@ -5,8 +5,8 @@ import PageLayout from '../layouts/PageLayout';
 import SEO, { ogTypeArticle, titleModeSuffix } from '../shared/SEO';
 
 type PostProps = {
-    post: PostTemplateQuery,
-    children?: React.ReactNode
+  post: PostTemplateQuery,
+  children?: React.ReactNode
 }
 
 const PostScreen = (props: PostProps): React.ReactElement => {
@@ -24,7 +24,9 @@ const PostScreen = (props: PostProps): React.ReactElement => {
         type={ogTypeArticle}
       />
       <Post post={post}>{children}</Post>
-      <div className="flex flex-row justify-center items-center mt-16">
+      <div className="flex flex-row justify-center items-center mt-16
+      
+      ">
         <div className="max-w-md" />
       </div>
     </PageLayout>
