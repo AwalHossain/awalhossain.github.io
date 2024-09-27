@@ -1,5 +1,5 @@
-export const siteURL = 'https://awalhossain.tech';
-export const defaultSiteTitle = 'awalhossain.tech';
+export const siteURL = 'https://awalhossain.github.io';
+export const defaultSiteTitle = 'Awal Hossain';
 export const defaultSiteDescription = 'Personal blog and projects by Awal Hossain';
 export const brandName = 'Awal';
 export const windowNamePrefix = brandName;
