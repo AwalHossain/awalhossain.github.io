@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import { Link } from '../../types/Link';
-import { Route, routes } from '../constants/routes';
-import HyperLink from './HyperLink';
-import ContactForm from '../elements/ContacForm';
 import ThemeToggle from '../config/ThemeToggle';
+import { Route, routes } from '../constants/routes';
+import ContactForm from '../elements/ContacForm';
+import HyperLink from './HyperLink';
 
 const NavMenu = (): React.ReactElement => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,38 +21,40 @@ const NavMenu = (): React.ReactElement => {
 
     // If this is the 'Contact' link, add an onClick handler
     const extraProps = route.name === 'Contact' ? { onClick: handleContactClick } : {};
+    console.log('extraProps', url, extraProps, routes);
+
     return (
       <>
-      <li key={route.path} className="ml-5">
-        <HyperLink
-          link={link}
-          className="uppercase text-xs"
-          activeClassName="font-bold"
-          {...extraProps}
-          
-        >
-          {route.name}
-        </HyperLink>
-      </li>
+        <li key={route.path} className="ml-5">
+          <HyperLink
+            link={link}
+            className="uppercase text-xs"
+            activeClassName="font-bold"
+            {...extraProps}
+
+          >
+            {route.name}
+          </HyperLink>
+        </li>
       </>
-      
+
     );
   });
 
 
   return (
     <>
-    <ul className="flex flex-row">
-      {links}
-      <li className="ml-5 text- uppercase cursor-pointer">
-        <ThemeToggle />
-      </li>
-    </ul>
-    {
-      isModalOpen && (
-        <ContactForm isOpen={isModalOpen} closeModal={closeModal} />
-      )
-    }
+      <ul className="flex flex-row">
+        {links}
+        <li className="ml-5 text- uppercase cursor-pointer">
+          <ThemeToggle />
+        </li>
+      </ul>
+      {
+        isModalOpen && (
+          <ContactForm isOpen={isModalOpen} closeModal={closeModal} />
+        )
+      }
     </>
   );
 };
